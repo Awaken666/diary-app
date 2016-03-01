@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "TS1";
+    src: url(../fonts/5.ttf)   format("truetype");
+}
+
+@font-face {
+    font-family: "TS2";
+    src: url(../fonts/4.ttf)   format("truetype");
+}
+
+@font-face {
+    font-family: "TS3";
+    src: url(../fonts/2.ttf)   format("truetype");
+}
+
+html, body {
+    width: 100%;
+    background: rgb(253, 253, 190);
+}
+
+header {
+    height: 3em;
+    margin: -0.4em auto;
+    background-image: url("../img/header-background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    font-size: 4.6em;
+    font-family: "TS1";
+    text-shadow: 5px -2px 5px #BCB524;
+}

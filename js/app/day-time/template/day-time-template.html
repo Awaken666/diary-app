@@ -1,0 +1,42 @@
+<div class="day-time">
+    <h3 class="day-time-tittle">{{ $ctrl.time.dayTime }}</h3>
+
+    <div class="input">
+        <form>
+            <label>Наименование: <input type="text" class="food" ng-model="$ctrl.foodName" ng-keypress="$ctrl.enter($event)"/></label>
+            <label>Порция(гр): <input type="text" class="portion_input" size="2" ng-model="$ctrl.portion" ng-keypress="$ctrl.enter($event)"/></label>
+        </form>
+        <div class="add-button" ng-click="$ctrl.addFood($ctrl.foodName, $ctrl.portion)">+</div>
+        <div class="toggle-table" ng-click="$ctrl.toggle({id: $ctrl.time.id})" ng-class="{down: !$ctrl.time.show, up: $ctrl.time.show}"></div>
+    </div>
+
+    <div class="table-border" ng-if="$ctrl.time.show">
+        <div class="table">
+            <div class="table-tittle">
+                <span class="name">Наименование продукта</span>
+                <span class="portion">Порция(гр)</span>
+                <span class="carbohyd">Углеводы</span>
+                <span class="prot">Белки</span>
+                <span class="fat">Жиры</span>
+                <span class="kall">Калории</span>
+            </div>
+
+
+            <food ng-repeat="food in $ctrl.foods" food="food" remove="$ctrl.removeFood(food)"></food>
+
+
+            <div class="summary">
+                <span class="name">Подытог</span>
+                <span class="portion">---</span>
+                <span class="carbohyd">{{ $ctrl.summary.carbohyd | value }}</span>
+                <span class="prot">{{ $ctrl.summary.prot | value }}</span>
+                <span class="fat">{{ $ctrl.summary.fat | value }}</span>
+                <span class="kall">{{ $ctrl.summary.kall | value }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="br"></div>

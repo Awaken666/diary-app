@@ -1,0 +1,90 @@
+'use strict';
+
+const dayTimeTemplate = require('./template/day-time-template.html');
+
+const dayTime = {
+    bindings: {
+        time: '<',
+        toggle: '&',
+        calc: '&'
+    },
+    controller: function(dataService) {
+        var self = this;
+        this.base = {};
+        dataService.getFoodBase()
+            .then((data) => this.base.food = data);
+
+
+        function validate(name, portion) {
+            if (!name) {
+                alert('Введите название продукта');
+            } else if (!self.base[name]) {
+                alert('Такого продукта нет в базе. Со списком продуктов Вы можете ознакомиться в разделе' +
+                    '"Таблицы", либо добавить свой продукт');
+            } else if (!portion) {
+                alert('Введите порцию в граммах');
+            } else if (isNaN(+portion)) {
+                alert('В поле "Порция" введите число');
+            } else { return true}
+        }
+        function calculateValues(foodName, portion) {
+            let values = self.base[foodName];
+            return {
+                name: foodName,
+                portion: portion,
+                carbohyd: values[1]/values[0]*portion,
+                prot: values[2]/values[0]*portion,
+                fat: values[3]/values[0]*portion,
+                kall: values[4]/values[0]*portion
+            }
+        }
+
+        const empty = {
+            empty: true,
+            name: '---------',
+            portion: '---',
+            carbohyd: '---',
+            prot: '---',
+            fat: '---',
+            kall: '---'
+        };
+        this.foods = [empty];
+
+        this.removeFood = function(food) {
+            let index = this.foods.indexOf(food);
+            this.foods.splice(index, 1);
+            if (this.foods.length === 0) this.foods.push(empty);
+            for (let key in this.summary) this.summary[key] -= +(food[key]);
+            this.calc({array: [food.carbohyd, food.prot, food.fat, food.kall], bool: false});
+        };
+
+        this.addFood = function(name, portion) {
+            if (!validate(name, portion)) return;
+            if (this.foods[0].empty) this.foods.splice(0, 1);
+
+            var food = calculateValues(name, portion);
+            this.foods.push(food);
+            for (let key in this.summary) this.summary[key] += +(food[key]);
+            this.calc({array: [food.carbohyd, food.prot, food.fat, food.kall], bool: true});
+            this.foodName = '';
+            this.portion ='';
+        };
+
+        this.enter = function(event) {
+            if (event.keyCode !== 13) return;
+            this.addFood(this.foodName, this.portion);
+            if (!this.time.show) this.toggle({id: this.time.id});
+        };
+
+        this.summary = {
+            carbohyd: 0,
+            prot: 0,
+            fat: 0,
+            kall: 0
+        }
+
+    },
+    template: dayTimeTemplate
+};
+
+module.exports = dayTime;

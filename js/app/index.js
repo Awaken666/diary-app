@@ -3,4 +3,14 @@ const animate = require('angular-animate');
 
 const diaryApp = angular.module('diary', ['ngAnimate']);
 
-diaryApp.component('menu', require('./menu/menu-component'));
+diaryApp.filter('value', require('./services/values-filter'));
+diaryApp
+    .factory('dataService', require('./services/data-service'));
+
+diaryApp
+    .component('menu', require('./menu/menu-component'))
+    .component('mainView', require('./main-view/main-view-component'))
+    .component('dayTime', require('./day-time/day-time-component'))
+    .component('food', require('./food/food-component'));
+
+module.exports = diaryApp;

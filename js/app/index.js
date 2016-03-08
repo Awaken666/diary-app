@@ -5,7 +5,9 @@ const diaryApp = angular.module('diary', ['ngAnimate']);
 
 diaryApp.filter('value', require('./services/values-filter'));
 diaryApp
-    .factory('dataService', require('./services/data-service'));
+    .factory('dataService', require('./services/data-service'))
+    .factory('validationService', require('./services/validation-service'))
+    .factory('calculationService', require('./services/calculation-service'));
 
 diaryApp
     .component('menu', require('./menu/menu-component'))

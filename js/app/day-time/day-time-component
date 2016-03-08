@@ -8,36 +8,17 @@ const dayTime = {
         toggle: '&',
         calc: '&'
     },
-    controller: function(dataService) {
-        var self = this;
+    controller: function(dataService, validationService, calculationService) {
         this.base = {};
         dataService.getFoodBase()
             .then((data) => this.base.food = data);
 
-
-        function validate(name, portion) {
-            if (!name) {
-                alert('Введите название продукта');
-            } else if (!self.base[name]) {
-                alert('Такого продукта нет в базе. Со списком продуктов Вы можете ознакомиться в разделе' +
-                    '"Таблицы", либо добавить свой продукт');
-            } else if (!portion) {
-                alert('Введите порцию в граммах');
-            } else if (isNaN(+portion)) {
-                alert('В поле "Порция" введите число');
-            } else { return true}
-        }
-        function calculateValues(foodName, portion) {
-            let values = self.base[foodName];
-            return {
-                name: foodName,
-                portion: portion,
-                carbohyd: values[1]/values[0]*portion,
-                prot: values[2]/values[0]*portion,
-                fat: values[3]/values[0]*portion,
-                kall: values[4]/values[0]*portion
-            }
-        }
+        this.summary = {
+            carbohyd: 0,
+            prot: 0,
+            fat: 0,
+            kall: 0
+        };
 
         const empty = {
             empty: true,
@@ -59,10 +40,10 @@ const dayTime = {
         };
 
         this.addFood = function(name, portion) {
-            if (!validate(name, portion)) return;
+            if (!validationService.foodAddValidation(name, portion)) return;
             if (this.foods[0].empty) this.foods.splice(0, 1);
 
-            var food = calculateValues(name, portion);
+            var food = calculationService.calculateValues(name, portion);
             this.foods.push(food);
             for (let key in this.summary) this.summary[key] += +(food[key]);
             this.calc({array: [food.carbohyd, food.prot, food.fat, food.kall], bool: true});
@@ -75,14 +56,6 @@ const dayTime = {
             this.addFood(this.foodName, this.portion);
             if (!this.time.show) this.toggle({id: this.time.id});
         };
-
-        this.summary = {
-            carbohyd: 0,
-            prot: 0,
-            fat: 0,
-            kall: 0
-        }
-
     },
     template: dayTimeTemplate
 };

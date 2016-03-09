@@ -15,72 +15,7 @@ const mainView = {
         };
 
         this.base = {};
-        dataService.getFoodBase()
-            .then((data) => this.base.foods = data);
-
-         var dayTimes = [
-            {
-                dayTime: 'Завтрак',
-                show: true, id: 0,
-                foods: [empty],
-                result: {
-                    carbohyd: 0,
-                    prot: 0,
-                    fat: 0,
-                    kall: 0
-                }
-            },
-            {
-                dayTime: 'Перекус 1',
-                show: false, id: 1,
-                foods: [empty],
-                result: {
-                    carbohyd: 0,
-                    prot: 0,
-                    fat: 0,
-                    kall: 0
-                }
-            },
-            {
-                dayTime: 'Обед',
-                show: false,
-                id: 2,
-                foods: [empty],
-                result: {
-                    carbohyd: 0,
-                    prot: 0,
-                    fat: 0,
-                    kall: 0
-                }
-            },
-            {
-                dayTime: 'Перекус 2',
-                show: false,
-                id: 3,
-                foods: [empty],
-                result: {
-                    carbohyd: 0,
-                    prot: 0,
-                    fat: 0,
-                    kall: 0
-                }
-            },
-            {
-                dayTime: 'Ужин',
-                show: false,
-                id: 4,
-                foods: [empty],
-                result: {
-                    carbohyd: 0,
-                    prot: 0,
-                    fat: 0,
-                    kall: 0
-                }
-            }
-        ];
-
         this.viewData = {
-            dayTimes: dayTimes,
             resultFinal: {
                 carbohyd: 0,
                 prot: 0,
@@ -88,6 +23,16 @@ const mainView = {
                 kall: 0
             }
         };
+
+
+
+        dataService.getFoodBase()
+            .then((data) => this.base.foods = data);
+
+        dataService.getDayTimesData()
+            .then((data) => this.viewData.dayTimes = data.data);
+
+
 
         this.addFood = function(dayTimeId, food) {
             let collection = this.viewData.dayTimes[dayTimeId].foods;

@@ -26,6 +26,9 @@ module.exports = {
         loaders: [, {
             test: /\.html$/,
             loader: 'ng-cache'
+        }, {
+            test: /\.js$/,
+            loader: 'babel?presets[]=es2015'
         }]
 
     }

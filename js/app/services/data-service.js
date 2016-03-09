@@ -16,7 +16,17 @@ module.exports = function($http) {
         })
     }
 
+    function getFoodObjects() {
+        return $http.get('./JSONdata/food.json')
+    }
+
+    function getDayTimesData() {
+        return $http.get('./JSONdata/day-times-data.json')
+    }
+
     return {
-        getFoodBase: getFoodBase
+        getFoodBase: getFoodBase,
+        getFoodObjects: getFoodObjects,
+        getDayTimesData: getDayTimesData
     };
 };

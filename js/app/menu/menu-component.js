@@ -6,6 +6,7 @@ const menu = {
     controller: function($timeout) {
         this.carbohydrates = false;
         this.proteins = false;
+
         this.setDiet = function(diet) {
             if(this[diet]) {
                 this[diet] = false;
@@ -16,13 +17,15 @@ const menu = {
             this.proteins = diet === 'proteins'
         };
 
+
         this.className = 'start';
+
+
         this.setClassName = function(phaseId) {
             if (this.className !== 'start') return;
             this.className = 'active' + phaseId;
         };
         this.moveLeft = function() {
-            debugger;
             let numb = +this.className.slice(-1);
             numb -= 1;
             if (!numb) numb = 3;

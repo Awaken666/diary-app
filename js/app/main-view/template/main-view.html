@@ -1,5 +1,10 @@
 <div class="main-view">
-    <day-time ng-repeat="time in $ctrl.dayTimes" time="time" calc="$ctrl.calcResult(array, bool)" toggle="$ctrl.toggleDayTime(id)"></day-time>
+    <day-time ng-repeat="time in $ctrl.viewData.dayTimes"
+              time="time"
+              base="$ctrl.base"
+              add="$ctrl.addFood(dayTimeId, food)"
+              remove="$ctrl.removeFood(dayTimeId, food)"
+              toggle="$ctrl.toggleDayTime(id)"></day-time>
 
     <div class="result">
         <div class="result-tittle">Итого</div>
@@ -17,10 +22,10 @@
             <div class="result-final">
                 <span class="name"></span>
                 <span class="portion">---</span>
-                <span class="carbohyd">{{ $ctrl.result[0] | value  }}</span>
-                <span class="prot">{{ $ctrl.result[1] | value  }}</span>
-                <span class="fat">{{ $ctrl.result[2] | value  }}</span>
-                <span class="kall">{{ $ctrl.result[3] | value  }}</span>
+                <span class="carbohyd">{{ $ctrl.viewData.resultFinal.carbohyd | value  }}</span>
+                <span class="prot">{{ $ctrl.viewData.resultFinal.prot | value  }}</span>
+                <span class="fat">{{ $ctrl.viewData.resultFinal.fat | value  }}</span>
+                <span class="kall">{{ $ctrl.viewData.resultFinal.kall | value  }}</span>
             </div>
 
         </section>

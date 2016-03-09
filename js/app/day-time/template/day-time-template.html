@@ -3,10 +3,22 @@
 
     <div class="input">
         <form>
-            <label>Наименование: <input type="text" class="food" ng-model="$ctrl.foodName" ng-keypress="$ctrl.enter($event)"/></label>
+            <label>Наименование: <angucomplete-alt ng-keypress="$ctrl.enter($event)"
+                                                   id="ex1"
+                                                   placeholder="Введите продукт"
+                                                   pause="100"
+                                                   selected-object="$ctrl.foodName"
+                                                   local-data="$ctrl.base.foods.keys"
+                                                   search-fields="foodName"
+                                                   title-field="foodName"
+                                                   minlength="1"
+                                                   input-changed="$ctrl.onInput"
+                                                   input-class="food form-control-small"
+                                                   match-class="highlight"></angucomplete-alt></label>
+
             <label>Порция(гр): <input type="text" class="portion_input" size="2" ng-model="$ctrl.portion" ng-keypress="$ctrl.enter($event)"/></label>
         </form>
-        <div class="add-button" ng-click="$ctrl.addFood($ctrl.foodName, $ctrl.portion)">+</div>
+        <div class="add-button" ng-click="$ctrl.addFood()">+</div>
         <div class="toggle-table" ng-click="$ctrl.toggle({id: $ctrl.time.id})" ng-class="{down: !$ctrl.time.show, up: $ctrl.time.show}"></div>
     </div>
 
@@ -22,16 +34,16 @@
             </div>
 
 
-            <food ng-repeat="food in $ctrl.foods" food="food" remove="$ctrl.removeFood(food)"></food>
+            <food ng-repeat="food in $ctrl.time.foods" food="food" remove="$ctrl.removeFood(food)"></food>
 
 
             <div class="summary">
                 <span class="name">Подытог</span>
                 <span class="portion">---</span>
-                <span class="carbohyd">{{ $ctrl.summary.carbohyd | value }}</span>
-                <span class="prot">{{ $ctrl.summary.prot | value }}</span>
-                <span class="fat">{{ $ctrl.summary.fat | value }}</span>
-                <span class="kall">{{ $ctrl.summary.kall | value }}</span>
+                <span class="carbohyd">{{ $ctrl.time.result.carbohyd | value }}</span>
+                <span class="prot">{{ $ctrl.time.result.prot | value }}</span>
+                <span class="fat">{{ $ctrl.time.result.fat | value }}</span>
+                <span class="kall">{{ $ctrl.time.result.kall | value }}</span>
             </div>
         </div>
     </div>

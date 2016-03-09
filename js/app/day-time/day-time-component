@@ -4,57 +4,46 @@ const dayTimeTemplate = require('./template/day-time-template.html');
 
 const dayTime = {
     bindings: {
+        base: '<',
         time: '<',
         toggle: '&',
-        calc: '&'
+        add: '&',
+        remove: '&'
     },
-    controller: function(dataService, validationService, calculationService) {
-        this.base = {};
-        dataService.getFoodBase()
-            .then((data) => this.base.food = data);
-
-        this.summary = {
-            carbohyd: 0,
-            prot: 0,
-            fat: 0,
-            kall: 0
+    controller: function(dataService, validationService, calculationService, $scope) {
+        var text = '';
+        this.onInput = function(str) {
+            text = str;
         };
 
-        const empty = {
-            empty: true,
-            name: '---------',
-            portion: '---',
-            carbohyd: '---',
-            prot: '---',
-            fat: '---',
-            kall: '---'
-        };
-        this.foods = [empty];
 
         this.removeFood = function(food) {
-            let index = this.foods.indexOf(food);
-            this.foods.splice(index, 1);
-            if (this.foods.length === 0) this.foods.push(empty);
-            for (let key in this.summary) this.summary[key] -= +(food[key]);
-            this.calc({array: [food.carbohyd, food.prot, food.fat, food.kall], bool: false});
+            this.remove({dayTimeId: this.time.id, food: food})
         };
 
-        this.addFood = function(name, portion) {
+        this.addFood = function() {
+            let portion = Math.round(+this.portion);
+            let name = this.foodName ? this.foodName.title : text;
+
+            //Проверить поля ввода, вычислить значения
             if (!validationService.foodAddValidation(name, portion)) return;
-            if (this.foods[0].empty) this.foods.splice(0, 1);
-
             var food = calculationService.calculateValues(name, portion);
-            this.foods.push(food);
-            for (let key in this.summary) this.summary[key] += +(food[key]);
-            this.calc({array: [food.carbohyd, food.prot, food.fat, food.kall], bool: true});
-            this.foodName = '';
+
+            //Добавить в массив
+            this.add({dayTimeId: this.time.id, food: food});
+
+            //Очистить поля ввода
+            $scope.$broadcast('angucomplete-alt:clearInput');
             this.portion ='';
+
+            //Открыть, если скрыто
+            if (!this.time.show) this.toggle({id: this.time.id});
         };
+
 
         this.enter = function(event) {
             if (event.keyCode !== 13) return;
-            this.addFood(this.foodName, this.portion);
-            if (!this.time.show) this.toggle({id: this.time.id});
+            this.addFood();
         };
     },
     template: dayTimeTemplate

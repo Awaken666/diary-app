@@ -1,7 +1,8 @@
 'use strict';
 const animate = require('angular-animate');
+const autocomplite = require('angucomplete-alt');
 
-const diaryApp = angular.module('diary', ['ngAnimate']);
+const diaryApp = angular.module('diary', ['ngAnimate', 'angucomplete-alt']);
 
 diaryApp.filter('value', require('./services/values-filter'));
 diaryApp

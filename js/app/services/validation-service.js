@@ -5,7 +5,7 @@ module.exports = function(dataService) {
     dataService.getFoodBase()
         .then((data) => food = data);
 
-    setTimeout(() => console.log(food), 3000);
+
 
     function foodAddValidation(name, portion) {
         if (!name) {
@@ -17,6 +17,8 @@ module.exports = function(dataService) {
             alert('Введите порцию в граммах');
         } else if (isNaN(+portion)) {
             alert('В поле "Порция" введите число');
+        }else if (portion <= 0) {
+            alert('Введите число больше чем 0')
         } else { return true}
     }
 

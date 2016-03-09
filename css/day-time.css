@@ -40,12 +40,22 @@ day-time .input label {
     text-shadow: 5px -2px 5px #BCB524;
 }
 
+day-time .input label angucomplete-alt {
+    display: inline-block;
+    vertical-align: top;
+}
+
 day-time .input label input {
     vertical-align: top;
     border: solid rgb(107, 50, 95) 1px;
     border-radius: 5px;
     background-color: #e0d8e8;
     font-weight: bold;
+}
+
+day-time .input label input:focus {
+    outline: none;
+    box-shadow: 0 0 6px 1px #BCB524;
 }
 
 day-time .input .add-button {
@@ -193,3 +203,15 @@ day-time .table .summary span.name {
     text-align: left;
 }
 
+day-time .angucomplete-dropdown {
+    position: absolute;
+    max-height: 15em;
+    overflow-y: auto;
+    border: solid black 2px;
+    z-index: 9999;
+    background: rgb(253, 253, 190);
+}
+
+day-time .angucomplete-row {
+    padding: 0.2em 0.1em;
+}

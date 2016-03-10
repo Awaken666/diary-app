@@ -8,7 +8,8 @@ const dayTime = {
         time: '<',
         toggle: '&',
         add: '&',
-        remove: '&'
+        remove: '&',
+        dayTimeLimits: '<'
     },
     controller: function(dataService, validationService, calculationService, $scope) {
         var text = '';
@@ -16,6 +17,14 @@ const dayTime = {
             text = str;
         };
 
+        this.limits = function() {
+            if (this.dayTimeLimits.limits) return this.dayTimeLimits.limits[this.time.dayTime];
+        };
+
+        this.compare = function(key) {
+            if (!this.limits()) return;
+            if (this.limits()[key] < this.time.result[key]) return true;
+        };
 
         this.removeFood = function(food) {
             this.remove({dayTimeId: this.time.id, food: food})

@@ -40,10 +40,10 @@
             <div class="summary">
                 <span class="name">Подытог</span>
                 <span class="portion">---</span>
-                <span class="carbohyd">{{ $ctrl.time.result.carbohyd | value }}</span>
-                <span class="prot">{{ $ctrl.time.result.prot | value }}</span>
-                <span class="fat">{{ $ctrl.time.result.fat | value }}</span>
-                <span class="kall">{{ $ctrl.time.result.kall | value }}</span>
+                <span class="carbohyd" ng-class="{'active-limit': $ctrl.compare('carbohyd')}">{{ $ctrl.time.result.carbohyd }} {{'(' + $ctrl.limits().carbohyd + ')' | limit }}</span>
+                <span class="prot" ng-class="{'active-limit': $ctrl.compare('prot')}">{{ $ctrl.time.result.prot }} {{'(' + $ctrl.limits().prot + ')' | limit }}</span>
+                <span class="fat" ng-class="{'active-limit': $ctrl.compare('fat')}">{{ $ctrl.time.result.fat }} {{'(' + $ctrl.limits().fat + ')' | limit }}</span>
+                <span class="kall" ng-class="{'active-limit': $ctrl.compare('kall')}">{{ $ctrl.time.result.kall }} {{'(' + $ctrl.limits().kall + ')' | limit }}</span>
             </div>
         </div>
     </div>

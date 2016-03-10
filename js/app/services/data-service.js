@@ -24,9 +24,15 @@ module.exports = function($http) {
         return $http.get('./JSONdata/day-times-data.json')
     }
 
+    function getLimitsData(diet, phase) {
+        let path = './JSONdata/limits-data/' + diet + '-phase' + phase + '.json';
+        return $http.get(path);
+    }
+
     return {
         getFoodBase: getFoodBase,
         getFoodObjects: getFoodObjects,
-        getDayTimesData: getDayTimesData
+        getDayTimesData: getDayTimesData,
+        getLimitsData: getLimitsData
     };
 };

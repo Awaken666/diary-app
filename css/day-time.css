@@ -195,6 +195,7 @@ day-time .table .summary span {
     display: inline-block;
     width: 13%;
     text-align: center;
+    line-height: 1.5em;
 }
 
 day-time .table .summary span.name {
@@ -214,4 +215,8 @@ day-time .angucomplete-dropdown {
 
 day-time .angucomplete-row {
     padding: 0.2em 0.1em;
+}
+
+day-time span.active-limit {
+    background: red;
 }

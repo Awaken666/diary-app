@@ -3,7 +3,7 @@
 var menuTemplate = require('./template/menu-template.html');
 
 const menu = {
-    controller: function($timeout) {
+    controller: function($timeout, validationService, limitsService) {
         this.carbohydrates = false;
         this.proteins = false;
 
@@ -14,7 +14,8 @@ const menu = {
                 return;
             }
             this.carbohydrates = diet === 'carbohydrates';
-            this.proteins = diet === 'proteins'
+            this.proteins = diet === 'proteins';
+            if (validationService.validateLimitsChoose(this.carbohydrates, this.proteins, this.className)) this.setLimits();
         };
 
 
@@ -24,18 +25,27 @@ const menu = {
         this.setClassName = function(phaseId) {
             if (this.className !== 'start') return;
             this.className = 'active' + phaseId;
+            if (validationService.validateLimitsChoose(this.carbohydrates, this.proteins, this.className)) this.setLimits();
         };
         this.moveLeft = function() {
             let numb = +this.className.slice(-1);
             numb -= 1;
             if (!numb) numb = 3;
             this.className = 'active' + numb;
+            if (validationService.validateLimitsChoose(this.carbohydrates, this.proteins, this.className)) this.setLimits();
         };
         this.moveRight = function() {
             let numb = +this.className.slice(-1);
             numb += 1;
             if (numb > 3) numb = 1;
             this.className = 'active' + numb;
+            if (validationService.validateLimitsChoose(this.carbohydrates, this.proteins, this.className)) this.setLimits();
+        };
+
+        this.setLimits = function() {
+            let diet = this.carbohydrates ? 'carbohydrates' : 'proteins',
+                phase = this.className.slice(-1);
+            limitsService.setLimits(diet, phase);
         }
 
     },

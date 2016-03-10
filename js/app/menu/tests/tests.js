@@ -5,16 +5,25 @@ describe('Menu component tests', function() {
         $scope,
         isolatSscope,
         controller,
-        $timeout;
+        $timeout,
+        limitsService,
+        validationService;
 
-    beforeEach(inject(function ($rootScope, $compile, _$timeout_) {
+    beforeEach(inject(function ($rootScope, $compile, _$timeout_, _limitsService_, _validationService_, $httpBackend) {
         $timeout = _$timeout_;
+        limitsService = _limitsService_;
+        validationService = _validationService_;
+
+        spyOn(limitsService, 'setLimits');
+        spyOn(validationService, 'validateLimitsChoose');
 
         element = angular.element('<menu></menu>');
         $scope = $rootScope.$new();
         $compile(element)($scope);
         isolatSscope = element.isolateScope();
         controller = isolatSscope.$ctrl;
+
+        $httpBackend.whenGET('./JSONdata/food.json').respond('');
     }));
 
     it('check properties', function() {
@@ -71,4 +80,10 @@ describe('Menu component tests', function() {
         controller.moveRight();
         expect(controller.className).toBe('active1');
     });
+
+    it('check setLimits method', function() {
+        controller.setLimits();
+
+        expect(limitsService.setLimits).toHaveBeenCalled();
+    })
 });

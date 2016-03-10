@@ -3,7 +3,7 @@
 const mainViewTemplate = require('./template/main-view.html');
 
 const mainView = {
-    controller: function (dataService) {
+    controller: function (dataService, limitsService) {
         const empty = {
             empty: true,
             name: '---------',
@@ -16,6 +16,7 @@ const mainView = {
 
         this.base = {};
         this.viewData = {
+            limitsData: limitsService.limitsData,
             resultFinal: {
                 carbohyd: 0,
                 prot: 0,
@@ -25,13 +26,17 @@ const mainView = {
         };
 
 
-
         dataService.getFoodBase()
             .then((data) => this.base.foods = data);
 
         dataService.getDayTimesData()
             .then((data) => this.viewData.dayTimes = data.data);
 
+
+        this.compare = function(key) {
+            if (!this.viewData.limitsData.limits) return;
+            if (this.viewData.limitsData.limits["Итог"][key] < this.viewData.resultFinal[key]) return true;
+        };
 
 
         this.addFood = function(dayTimeId, food) {

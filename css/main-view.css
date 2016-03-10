@@ -82,3 +82,6 @@ main-view .result .table-result .table-result-tittle .kall {
 }
 
 
+main-view span.active-limit {
+    background: red;
+}

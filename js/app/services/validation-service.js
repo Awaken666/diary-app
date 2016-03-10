@@ -22,7 +22,12 @@ module.exports = function(dataService) {
         } else { return true}
     }
 
+    function validateLimitsChoose(diet1, diet2, phaseClass) {
+        if( (diet1 || diet2) && phaseClass !== 'start') return true;
+    }
+
     return {
-        foodAddValidation: foodAddValidation
+        foodAddValidation: foodAddValidation,
+        validateLimitsChoose: validateLimitsChoose
     }
 };

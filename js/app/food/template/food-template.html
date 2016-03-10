@@ -1,9 +1,9 @@
 <div class="food" ng-class="$ctrl.checkEmptyFood($ctrl.food)">
     <span class="name">{{ $ctrl.food.name }}</span>
-    <span class="portion">{{ $ctrl.food.portion | value }}</span>
-    <span class="carbohyd">{{ $ctrl.food.carbohyd | value }}</span>
-    <span class="prot">{{ $ctrl.food.prot | value }}</span>
-    <span class="fat">{{ $ctrl.food.fat | value }}</span>
-    <span class="kall">{{ $ctrl.food.kall | value }}</span>
+    <span class="portion">{{ $ctrl.food.portion }}</span>
+    <span class="carbohyd">{{ $ctrl.food.carbohyd }}</span>
+    <span class="prot">{{ $ctrl.food.prot }}</span>
+    <span class="fat">{{ $ctrl.food.fat }}</span>
+    <span class="kall">{{ $ctrl.food.kall }}</span>
     <div class="remove-food" ng-click="$ctrl.remove({food: $ctrl.food})"></div>
 </div>

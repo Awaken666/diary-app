@@ -1,14 +1,14 @@
 'use strict';
-const animate = require('angular-animate');
 const autocomplite = require('angucomplete-alt');
 
 const diaryApp = angular.module('diary', ['ngAnimate', 'angucomplete-alt']);
 
-diaryApp.filter('value', require('./services/values-filter'));
+diaryApp.filter('limit', require('./services/limits-filter'));
 diaryApp
     .factory('dataService', require('./services/data-service'))
     .factory('validationService', require('./services/validation-service'))
-    .factory('calculationService', require('./services/calculation-service'));
+    .factory('calculationService', require('./services/calculation-service'))
+    .factory('limitsService', require('./services/limits-service'));
 
 diaryApp
     .component('menu', require('./menu/menu-component'))

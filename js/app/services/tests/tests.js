@@ -42,6 +42,7 @@ describe('Services tests', function() {
 
             $httpBackend.whenGET('./JSONdata/food.json').respond(obj);
             $httpBackend.whenGET('./JSONdata/day-times-data.json').respond([{},{},{},{},{}]);
+            $httpBackend.whenGET('./JSONdata/limits-data/proteins-phase1.json').respond('test');
         }));
 
         it('should load food base', function() {
@@ -76,6 +77,18 @@ describe('Services tests', function() {
                     dayTimeData = data.data;
 
                     expect(dayTimeData.length).toBe(5);
+                });
+
+            $httpBackend.flush();
+        });
+
+        it('should load limits', function() {
+            var limits;
+            dataService.getLimitsData('proteins', 1)
+                .then((data) => {
+                    limits = data.data;
+
+                    expect(limits).toBe('test');
                 });
 
             $httpBackend.flush();
@@ -127,5 +140,31 @@ describe('Services tests', function() {
             expect(bool).toBe(true);
         })
 
+    });
+
+    describe('Limits service tests', function() {
+
+        var $httpBackend,
+            limitsService,
+            dataService;
+
+        beforeEach(inject(function(_$httpBackend_, _limitsService_, _dataService_) {
+            $httpBackend = _$httpBackend_;
+            limitsService = _limitsService_;
+            dataService =_dataService_;
+
+            spyOn(dataService, 'getLimitsData').and.callThrough();
+            $httpBackend.whenGET('./JSONdata/limits-data/proteins-phase1.json').respond('test');
+        }));
+
+        it('check setLimits method', function() {
+            expect(limitsService.limitsData).toEqual({});
+            limitsService.setLimits('proteins', 1);
+            $httpBackend.flush();
+
+            expect(dataService.getLimitsData).toHaveBeenCalled();
+            expect(limitsService.limitsData.limits).toBeDefined();
+
+        });
     });
 });

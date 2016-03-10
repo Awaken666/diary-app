@@ -2,6 +2,7 @@
     <day-time ng-repeat="time in $ctrl.viewData.dayTimes"
               time="time"
               base="$ctrl.base"
+              day-time-limits="$ctrl.viewData.limitsData"
               add="$ctrl.addFood(dayTimeId, food)"
               remove="$ctrl.removeFood(dayTimeId, food)"
               toggle="$ctrl.toggleDayTime(id)"></day-time>
@@ -22,10 +23,10 @@
             <div class="result-final">
                 <span class="name"></span>
                 <span class="portion">---</span>
-                <span class="carbohyd">{{ $ctrl.viewData.resultFinal.carbohyd | value  }}</span>
-                <span class="prot">{{ $ctrl.viewData.resultFinal.prot | value  }}</span>
-                <span class="fat">{{ $ctrl.viewData.resultFinal.fat | value  }}</span>
-                <span class="kall">{{ $ctrl.viewData.resultFinal.kall | value  }}</span>
+                <span class="carbohyd" ng-class="{'active-limit': $ctrl.compare('carbohyd')}">{{ $ctrl.viewData.resultFinal.carbohyd }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].carbohyd + ')' | limit }}</span>
+                <span class="prot" ng-class="{'active-limit': $ctrl.compare('prot')}">{{ $ctrl.viewData.resultFinal.prot  }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].prot + ')' | limit }}</span>
+                <span class="fat" ng-class="{'active-limit': $ctrl.compare('fat')}">{{ $ctrl.viewData.resultFinal.fat }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].fat + ')' | limit }}</span>
+                <span class="kall" ng-class="{'active-limit': $ctrl.compare('kall')}">{{ $ctrl.viewData.resultFinal.kall }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].kall + ')' | limit }}</span>
             </div>
 
         </section>

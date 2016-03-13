@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function($http) {
+module.exports = function($http, $window) {
     function getFoodBase() {
         return $http.get('./JSONdata/food.json').then((data) => {
             var base = {}, keys = [];
@@ -27,6 +27,13 @@ module.exports = function($http) {
     function getLimitsData(diet, phase) {
         let path = './JSONdata/limits-data/' + diet + '-phase' + phase + '.json';
         return $http.get(path);
+    }
+
+    if ($window.localStorage.saveData && !confirm('Загрузить сохранения?')) {
+        if (confirm('Удалить имеющиеся сохранения?')) {
+            $window.localStorage.removeItem('saveData');
+            $window.localStorage.removeItem('savedLimits');
+        }
     }
 
     return {

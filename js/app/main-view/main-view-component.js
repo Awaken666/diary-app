@@ -3,7 +3,7 @@
 const mainViewTemplate = require('./template/main-view.html');
 
 const mainView = {
-    controller: function (dataService, limitsService) {
+    controller: function (dataService, limitsService, $window) {
         const empty = {
             empty: true,
             name: '---------',
@@ -16,21 +16,29 @@ const mainView = {
 
         this.base = {};
         this.viewData = {
-            limitsData: limitsService.limitsData,
-            resultFinal: {
-                carbohyd: 0,
-                prot: 0,
-                fat: 0,
-                kall: 0
-            }
+            limitsData: limitsService.limitsData
         };
+
 
 
         dataService.getFoodBase()
             .then((data) => this.base.foods = data);
 
-        dataService.getDayTimesData()
-            .then((data) => this.viewData.dayTimes = data.data);
+        if ($window.localStorage.saveData) {
+            let data = JSON.parse($window.localStorage.saveData);
+            this.viewData.dayTimes = data.daysData;
+            this.viewData.resultFinal = data.resultFinal;
+        } else {
+            dataService.getDayTimesData()
+                .then((data) => this.viewData.dayTimes = data.data);
+
+            this.viewData.resultFinal = {
+                carbohyd: 0,
+                prot: 0,
+                fat: 0,
+                kall: 0
+            }
+        }
 
 
         this.compare = function(key) {
@@ -45,6 +53,8 @@ const mainView = {
 
             collection.push(food);
             this.calcResult(dayTimeId, food, true);
+
+            if ($window.localStorage._lastSaveId) $window.localStorage.removeItem('_lastSaveId');
         };
 
         this.removeFood = function(dayTimeId, food) {
@@ -54,6 +64,7 @@ const mainView = {
 
             if (collection.length === 0) collection.push(empty);
             this.calcResult(dayTimeId, food, false);
+            if ($window.localStorage._lastSaveId) $window.localStorage.removeItem('_lastSaveId');
         };
 
         this.toggleDayTime = function(id) {

@@ -1,0 +1,12 @@
+<div class="save-menu  group">
+    <div class="print-button group" ng-class="{'print-button-active': $ctrl.active}" ng-click="$ctrl.toggle()">Для печати</div>
+    <div class="save-button group" ng-click="$ctrl.saveData()">Сохранить изменения</div>
+    <div class="print-menu group" ng-if="$ctrl.active">
+        <div class="to-print" ng-click="$ctrl.preview()">Предпросмотр</div>
+        <div class="print-to-localStorage" ng-click="$ctrl.saveForPrint()">Сохранить для печати</div>
+        <div class="delte-print-localStorage" ng-click="$ctrl.removePrintSaves()">Удалить сохранения</div>
+    </div>
+</div>
+
+
+<div class="br"></div>

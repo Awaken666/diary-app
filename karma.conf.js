@@ -23,6 +23,7 @@ module.exports = function (config) {
         files: [
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
+            'node_modules/angular-animate/angular-animate.js',
             entry,
             'js/app/services/tests/tests.js',
             'js/app/main-view/tests/tests.js',

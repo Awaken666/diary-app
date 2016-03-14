@@ -26,10 +26,10 @@ module.exports = function (config) {
             'node_modules/angular-animate/angular-animate.js',
             entry,
             'js/app/services/tests/tests.js',
-            'js/app/main-view/tests/tests.js',
-            'js/app/day-time/tests/tests.js',
-            'js/app/food/tests/tests.js',
-            'js/app/menu/tests/tests.js'
+            'js/app/diary-module/main-view/tests/tests.js',
+            'js/app/diary-module/day-time/tests/tests.js',
+            'js/app/diary-module/food/tests/tests.js',
+            'js/app/diary-module/menu/tests/tests.js'
         ],
 
 

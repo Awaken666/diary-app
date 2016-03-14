@@ -1,0 +1,130 @@
+table-add .add-to-table-form {
+    position: relative;
+    width: 80%;
+    margin: 2em auto;
+}
+
+table-add  .add-to-table-form .add-form-title {
+    float: right;
+    width: 40%;
+    padding-left: 40px;
+    margin: 1em 0;
+    border-bottom: solid black 2px;
+    font-size: 2em;
+    font-family: "TS2";
+    text-shadow: 5px -2px 5px #BCB524;
+    cursor: default;
+}
+
+table-add .add-to-table-form .table-form {
+    clear: both;
+}
+
+table-add .add-to-table-form .add-to-table-button {
+    float: right;
+    height: 33px;
+    width: 33px;
+    margin-left: 0.9em;
+    border: solid black 3px;
+    border-radius: 30px;
+    font-family: "TS2";
+    font-size: 4em;
+    line-height: 0.45em;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+table-add .add-to-table-form .add-to-table-button:hover {
+    border-color: rgb(205, 0, 0);
+    color: rgba(205, 0, 0, 1);
+    box-shadow: 0 0 6px 0 rgba(205, 0, 0, 0.7);
+    transition: 0.6s;
+}
+
+table-add .add-to-table-form .table-form {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 2.4em;
+}
+
+table-add .add-to-table-form .table-form label {
+    float: left;
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    font-family: "TS2";
+    text-shadow: 5px -2px 5px #BCB524;
+}
+
+table-add .add-to-table-form .table-form label input {
+    vertical-align: middle;
+    border: solid rgb(107, 50, 95) 1px;
+    border-radius: 5px;
+    background-color: #e0d8e8;
+    font-weight: bold;
+}
+
+table-add .add-to-table-form .table-form label input:focus {
+    outline: none;
+    box-shadow: 0 0 6px 1px #BCB524;
+}
+
+/**/
+table-view .table-container {
+    width: 90%;
+    margin: 1em auto;
+}
+
+food-table table.tb {
+    display: inline-table;
+    width: 47%;
+    margin-right: 2.5%;
+    margin-bottom: 30px;
+    border: solid 2px black;
+}
+
+food-table table.tb caption.tb-title {
+    padding: 4px 0;
+    font-size: 2em;
+}
+
+food-table table.tb tr td {
+    border: solid black 1px;
+    width: 11%;
+    padding: 4px 0;
+    text-align: center;
+}
+
+food-table table.tb tr td.td-name {
+    width: 45%;
+    text-align: left;
+    padding-left: 10px;
+    border-right: double 5px black;
+}
+
+food-table table.tb td.color.name-color {
+    background: rgb(204, 173, 198);
+}
+
+food-table table.tb td.color.portion-color {
+    background: rgb(216, 169, 156);
+}
+
+food-table table.tb td.color.carbohyd-color {
+    background: rgb(160, 210, 157);
+}
+
+food-table table.tb td.color.prot-color {
+    background: rgb(255, 226, 36);
+}
+
+food-table table.tb td.color.fat-color {
+    background: rgb(242, 201, 187);
+}
+
+food-table table.tb td.color.kall-color {
+    background: rgb(181, 255, 248);
+}
+
+
+

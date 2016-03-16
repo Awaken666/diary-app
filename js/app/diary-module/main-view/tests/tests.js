@@ -1,6 +1,6 @@
 describe('Main View component tests', function () {
 
-    beforeEach(module('diary'));
+    beforeEach(module('app'));
 
     var empty = {
         empty: true,
@@ -49,7 +49,6 @@ describe('Main View component tests', function () {
     it('check properties', function () {
         expect(controller.base).toBeDefined();
         expect(controller.viewData.resultFinal).toBeDefined();
-        expect(dataService.getFoodBase).toHaveBeenCalled();
         expect(dataService.getDayTimesData).toHaveBeenCalled();
     });
 

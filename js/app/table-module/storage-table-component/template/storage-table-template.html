@@ -1,0 +1,20 @@
+<table class="tb" ng-if="$ctrl.show()">
+    <caption class="tb-title">Добавленые продукты</caption>
+    <tr>
+        <td class="td-name name-color color">Наименование продукта</td>
+        <td class="portion-color color">Порция</td>
+        <td class="carbohyd-color color">Углеводы</td>
+        <td class="prot-color color">Белки</td>
+        <td class="fat-color color">Жиры</td>
+        <td class="kall-color color">Калории</td>
+    </tr>
+
+    <tr class="my-food" ng-repeat="(foodName, values) in $ctrl.myFoods" ng-click="$ctrl.removeMyFood({name: foodName})">
+        <td class="td-name">{{ foodName }}</td>
+        <td>{{ values[0] }}</td>
+        <td>{{ values[1] }}</td>
+        <td>{{ values[2] }}</td>
+        <td>{{ values[3] }}</td>
+        <td>{{ values[4] }}</td>
+    </tr>
+</table>

@@ -71,11 +71,11 @@ table-add .add-to-table-form .table-form label input:focus {
 
 /**/
 table-view .table-container {
-    width: 90%;
+    width: 86%;
     margin: 1em auto;
 }
 
-food-table table.tb {
+table-view table.tb {
     display: inline-table;
     width: 47%;
     margin-right: 2.5%;
@@ -83,48 +83,52 @@ food-table table.tb {
     border: solid 2px black;
 }
 
-food-table table.tb caption.tb-title {
+table-view table.tb caption.tb-title {
     padding: 4px 0;
     font-size: 2em;
 }
 
-food-table table.tb tr td {
+table-view table.tb tr td {
     border: solid black 1px;
     width: 11%;
     padding: 4px 0;
     text-align: center;
 }
 
-food-table table.tb tr td.td-name {
+table-view table.tb tr td.td-name {
     width: 45%;
     text-align: left;
     padding-left: 10px;
     border-right: double 5px black;
 }
 
-food-table table.tb td.color.name-color {
+table-view table.tb td.color.name-color {
     background: rgb(204, 173, 198);
 }
 
-food-table table.tb td.color.portion-color {
+table-view table.tb td.color.portion-color {
     background: rgb(216, 169, 156);
 }
 
-food-table table.tb td.color.carbohyd-color {
+table-view table.tb td.color.carbohyd-color {
     background: rgb(160, 210, 157);
 }
 
-food-table table.tb td.color.prot-color {
+table-view table.tb td.color.prot-color {
     background: rgb(255, 226, 36);
 }
 
-food-table table.tb td.color.fat-color {
+table-view table.tb td.color.fat-color {
     background: rgb(242, 201, 187);
 }
 
-food-table table.tb td.color.kall-color {
+table-view table.tb td.color.kall-color {
     background: rgb(181, 255, 248);
 }
 
+table-view table.tb tr.my-food:hover {
+    background:  rgb(255, 82, 82);
+    cursor: pointer;
+}
 
 

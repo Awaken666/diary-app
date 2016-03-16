@@ -1,12 +1,10 @@
 'use strict';
 
 module.exports = function(dataService) {
-    var food;
-    dataService.getFoodBase()
-        .then((data) => food = data);
+    var food = dataService.base;
 
     function calculateValues(foodName, portion) {
-        let values = food[foodName];
+        let values = food.foods[foodName];
         return {
             name: foodName,
             portion: portion,

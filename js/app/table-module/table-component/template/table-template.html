@@ -1,6 +1,6 @@
 <table class="tb">
     <caption class="tb-title">{{ $ctrl.foodsObj.title }}</caption>
-    <tr ng-repeat="food in $ctrl.foodsObj.foods">
+    <tr ng-repeat="food in $ctrl.foodsObj.foods" ng-click="$ctrl.remove({food: food, obj: $ctrl.foodsObj.foods})" ng-class="food.className">
         <td class="td-name name-color" ng-class="food.className">{{ food.values.name }}</td>
         <td class="portion-color" ng-class="food.className">{{ food.values.portion }}</td>
         <td class="carbohyd-color" ng-class="food.className">{{ food.values.carbohyd }}</td>

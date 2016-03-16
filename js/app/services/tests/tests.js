@@ -2,7 +2,7 @@
 
 describe('Services tests', function() {
 
-    beforeEach(module('diary'));
+    beforeEach(module('app'));
 
     describe('Calculation service tests', function() {
 
@@ -155,6 +155,7 @@ describe('Services tests', function() {
 
             spyOn(dataService, 'getLimitsData').and.callThrough();
             $httpBackend.whenGET('./JSONdata/limits-data/proteins-phase1.json').respond('test');
+            $httpBackend.whenGET('./JSONdata/food.json').respond([{},{}]);
         }));
 
         it('check setLimits method', function() {

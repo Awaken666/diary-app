@@ -4,10 +4,11 @@ const tableTemplate = require('./template/table-template.html');
 
 const table = {
     bindings: {
-        foodsObj: '<'
+        foodsObj: '<',
+        remove: '&'
     },
     controller: function() {
-        setTimeout(() => console.log(this.foodsObj), 10000)
+
     },
     template: tableTemplate
 };

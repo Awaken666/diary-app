@@ -1,9 +1,13 @@
 'use strict';
 
 module.exports = function($http, $window) {
+    var base = {};
+
     function getFoodBase() {
         return $http.get('./JSONdata/food.json').then((data) => {
             var base = {}, keys = [];
+            if ($window.localStorage.myFoods) data.data.push(JSON.parse($window.localStorage.myFoods));
+
             data.data.forEach((obj) => {
                 for (let key in obj) {
                     if (key === 'name') continue;
@@ -13,6 +17,21 @@ module.exports = function($http, $window) {
             Object.keys(base).forEach((key) => keys.push({foodName: key}));
             base.keys = keys;
             return base;
+        })
+    }
+
+    getFoodBase().then((data) => base.foods = data);
+
+    function addToBase(name, values) {
+        base.foods[name] = values;
+        base.foods.keys.push({foodName: name});
+    }
+
+    function removeFromBase(name) {
+        delete base.foods[name];
+
+        base.foods.keys.forEach((obj, index) => {
+            if (obj.foodName === name) base.foods.keys.splice(index, 1);
         })
     }
 
@@ -86,6 +105,9 @@ module.exports = function($http, $window) {
     }
 
     return {
+        base: base,
+        addToBase: addToBase,
+        removeFromBase: removeFromBase,
         getFoodBase: getFoodBase,
         getFoodObjects: getFoodObjects,
         getTableData: getTableData,

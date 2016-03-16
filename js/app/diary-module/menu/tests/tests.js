@@ -1,5 +1,5 @@
 describe('Menu component tests', function() {
-    beforeEach(module('diary'));
+    beforeEach(module('app'));
 
     var element,
         $scope,

@@ -14,15 +14,10 @@ const mainView = {
             kall: '---'
         };
 
-        this.base = {};
+        this.base = dataService.base;
         this.viewData = {
             limitsData: limitsService.limitsData
         };
-
-
-
-        dataService.getFoodBase()
-            .then((data) => this.base.foods = data);
 
         if ($window.localStorage.saveData) {
             let data = JSON.parse($window.localStorage.saveData);

@@ -1,0 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    background: rgb(37, 40, 48);
+}.left-side-menu {
+    position: relative;
+    width: 4.3em;
+    height: 100%;
+    background: rgb(48, 52, 62);
+    overflow-x: visible;
+}
+
+
+
+left-side-menu .to-another-design {
+    position: relative;
+    width: 4.3em;
+    height: 4.5em;
+    background-size: 4.5em 9em;
+    cursor: pointer;
+}
+
+left-side-menu .to-another-design.icon1 {background: rgb(15, 16,19) url(css/images/icons/back-icon1.png) no-repeat center 0; background-size: 4.5em 9em;}
+left-side-menu .to-another-design.icon2 {background: rgb(15, 16,19) url(css/images/icons/back-icon2.png) no-repeat center 0; background-size: 4.5em 9em;}
+left-side-menu .to-another-design.icon3 {background: rgb(15, 16,19) url(css/images/icons/back-icon3.png) no-repeat center 0; background-size: 4.5em 9em;}
+
+left-side-menu .to-another-design:hover {
+    background-position: center -4.5em;
+}
+
+
+
+left-side-menu .menu-item {
+    position: relative;
+    width: 4.3em;
+    height: 3.5em;
+    border-bottom: 1px solid rgb(37, 40, 48);
+    cursor: pointer;
+    overflow: visible;
+}
+
+left-side-menu .menu-item.print {background: url(css/images/icons/print-icon.png) no-repeat center; background-size: 2.7em ;}
+left-side-menu .menu-item.print:hover {background: rgb(67, 72, 87) url(css/images/icons/print-icon-hover.png) no-repeat center; background-size: 2.7em;}
+left-side-menu .menu-item.print.active-print {background: rgb(37, 40, 48) url(css/images/icons/print-icon-active.png) no-repeat center; background-size: 2.7em ;}
+
+left-side-menu .menu-item.settings {background: url(css/images/icons/settings-icon.png) no-repeat center; background-size: 2em;}
+left-side-menu .menu-item.settings:hover {background: rgb(67, 72, 87) url(css/images/icons/settings-icon-hover.png) no-repeat center; background-size: 2em ;}
+left-side-menu .menu-item.settings.active-settings {background: rgb(37, 40, 48) url(css/images/icons/settings-icon-active.png) no-repeat center; background-size: 2em ;}
+
+left-side-menu .menu-item.result {background: url(css/images/icons/result-icon.png) no-repeat center; background-size: 2em;}
+left-side-menu .menu-item.result:hover {background: rgb(67, 72, 87) url(css/images/icons/result-icon-hover.png) no-repeat center; background-size: 2em ;}
+left-side-menu .menu-item.result.active-result {background: rgb(37, 40, 48) url(css/images/icons/result-icon-active.png) no-repeat center; background-size: 2em;}
+
+left-side-menu .menu-item.add-food {background: url(css/images/icons/add-food-icon.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.add-food:hover {background: rgb(67, 72, 87) url(css/images/icons/add-food-icon-hover.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.add-food.active-add-food {background: rgb(37, 40, 48) url(css/images/icons/add-food-active.png) no-repeat center; background-size: 1.8em ;}
+
+left-side-menu .menu-item.save {background: url(css/images/icons/save-icon.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.save:hover {background: rgb(67, 72, 87) url(css/images/icons/save-icon-hover.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.save.active-save {background: rgb(37, 40, 48) url(css/images/icons/save-icon-active.png) no-repeat center; background-size: 1.8em ;}
+
+left-side-menu .menu-item.tables {background: url(css/images/icons/tables-icon.png) no-repeat center; background-size: 1.9em;}
+left-side-menu .menu-item.tables:hover {background: rgb(67, 72, 87) url(css/images/icons/tables-icon-hover.png) no-repeat center; background-size: 1.9em;}
+left-side-menu .menu-item.tables.active-tables {background: rgb(37, 40, 48) url(css/images/icons/tables-icon-active.png) no-repeat center; background-size: 1.9em ;}
+
+left-side-menu .menu-item.home {background: url(css/images/icons/home-icon.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.home:hover {background: rgb(67, 72, 87) url(css/images/icons/home-icon-hover.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.home.active-home {background: rgb(37, 40, 48) url(css/images/icons/home-icon-active.png) no-repeat center; background-size: 1.8em ;}
+
+
+left-side-menu .tooltip {
+    position: absolute;
+    left: 115%;
+    top: 1.3em;
+    padding: 0.4em 0.7em;
+    line-height: 1.5em;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    font: 0.73em Helvetica, Arial, sans-serif;
+    color: rgb(37, 40, 48);
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+left-side-menu .tooltip:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-right-color: rgba(255, 255, 255, 0.9);
+    color: rgb(37, 40, 48);
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+}
+left-side-menu .tooltip.ng-leave.ng-leave-active,
+left-side-menu .tooltip.ng-enter {opacity: 0;}
+
+left-side-menu .tooltip.ng-leave,
+left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/

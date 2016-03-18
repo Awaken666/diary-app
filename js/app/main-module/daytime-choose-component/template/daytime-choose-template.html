@@ -1,0 +1,6 @@
+<div class="daytime-choose">
+    <div class="daytime"
+         ng-repeat="daytime in $ctrl.daytimes"
+         ng-click="$ctrl.setState(daytime)"
+         ng-class="{'daytime-active': daytime.active}" >{{ daytime.time }}</div>
+</div>

@@ -11,7 +11,8 @@ app
     .factory('dataService', require('./services/data-service'))
     .factory('validationService', require('./services/validation-service'))
     .factory('calculationService', require('./services/calculation-service'))
-    .factory('limitsService', require('./services/limits-service'));
+    .factory('limitsService', require('./services/limits-service'))
+    .factory('indexService', require('./services/index-service'));
 
 
 module.exports = app;

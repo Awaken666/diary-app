@@ -3,7 +3,7 @@
 const leftSideMenuTemplate = require('./template/left-side-menu-template.html');
 
 const leftSideMenu = {
-    controller: function () {
+    controller: function ($state) {
         this.menuItems = [
             {className: 'home', tooltip: 'На главную', tooltipShow: false},
             {className: 'settings', tooltip: 'Настройки', tooltipShow: false},
@@ -20,6 +20,7 @@ const leftSideMenu = {
         };
 
         this.setState = function(className) {
+            $state.go(className);
             this.activeClass = 'active-' + className;
         };
 

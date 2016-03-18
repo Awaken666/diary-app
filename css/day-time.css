@@ -1,0 +1,39 @@
+.day-time .input form {
+    font: 1.6em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+.day-time .input label {
+
+}
+
+.day-time .input angucomplete-alt {
+    display: inline-block;
+}
+.day-time .input input {
+    margin-left: 2.3em;
+    padding-left: 0.2em;
+    vertical-align: middle;
+    line-height: 1.5em;
+    background-color: rgb(67, 72, 87);
+    border: none;
+    border-radius: 5px;
+}
+.day-time .input input:focus {
+    outline: none;
+    background-color: rgb(200, 203, 213);
+}
+.day-time .input angucomplete-alt input {
+    width: 20em;
+}
+.day-time .input input.portion-input {
+    margin-left: 5em;
+}
+
+.day-time .input .add-button {
+    display: inline-block;
+    margin-left: 3.2em;
+    font: 4em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+    cursor: pointer;
+}

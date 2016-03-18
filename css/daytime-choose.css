@@ -1,0 +1,43 @@
+.daytime-choose {
+    position: relative;
+    height: 4.5em;
+    margin: 0 6em 0 13em;
+    border-bottom: solid rgb(67, 72, 87) 2px;
+
+}
+
+.daytime {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.75em;
+    margin-right: 2.6em;
+    padding: 0 0.2em 1em;
+    font-size: 1.2em;
+    font-family: Angry-Birds, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(193, 196, 203);
+    cursor: pointer;
+}
+
+.daytime:hover {
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: solid rgb(202, 22, 41) 2px;
+}
+
+.daytime-active:hover,
+.daytime-active {
+    color: rgba(202, 22, 41, 0.9);
+    border-bottom: solid rgba(202, 22, 41, 0.9) 2px;
+}
+.daytime-active:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-bottom-color: rgb(202, 22, 41);
+    color: rgb(37, 40, 48);
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;
+}

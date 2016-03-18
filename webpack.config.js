@@ -30,7 +30,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.html$/,
-            loader: 'ng-cache'
+            loader: 'ng-cache?-collapseWhitespace'
         }, {
             test: /\.js$/,
             loader: 'babel?presets[]=es2015'

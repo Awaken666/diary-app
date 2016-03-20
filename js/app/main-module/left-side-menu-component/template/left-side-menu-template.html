@@ -3,7 +3,7 @@
 
     <div class="menu-item"
          ng-repeat="item in $ctrl.menuItems"
-         ng-class="[item.className, $ctrl.activeClass]"
+         ng-class="[item.className, $ctrl.activeClass()]"
          ng-click="$ctrl.setState(item.className)"
          ng-mouseenter="$ctrl.toggle(item)"
          ng-mouseleave="$ctrl.toggle(item)">

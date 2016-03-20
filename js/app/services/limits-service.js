@@ -8,8 +8,14 @@ module.exports = function(dataService) {
             .then((data) => limitsData.limits = data.data)
     }
 
+
+    function clearLimits() {
+        if (limitsData.limits) delete limitsData.limits
+    }
+
     return {
         limitsData: limitsData,
-        setLimits: setLimits
+        setLimits: setLimits,
+        clearLimits: clearLimits
     }
 };

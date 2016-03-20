@@ -1,26 +1,23 @@
-<div class="menu-br"></div>
-
 <div id="menu">
     <div class="diet-menu">
         <div class="diet-tittle">Вид диеты:</div>
         <div class="diet-choose">
-            <span class="diet" ng-class="{active: $ctrl.proteins}" ng-click="$ctrl.setDiet('proteins')">Высокопротеиновая комбинация замен</span>
-            <span class="slash">/</span>
-            <span class="diet" ng-class="{active: $ctrl.carbohydrates}" ng-click="$ctrl.setDiet('carbohydrates')">Высокоуглеводная комбинация замен</span>
+            <span class="diet" ng-class="{active: $ctrl.diets.proteins}" ng-click="$ctrl.setDiet('proteins')">Высокопротеиновая комбинация замен</span>
+            <br>
+            <span class="diet" ng-class="{active: $ctrl.diets.carbohydrates}" ng-click="$ctrl.setDiet('carbohydrates')">Высокоуглеводная комбинация замен</span>
         </div>
     </div>
     <div class="phase-menu">
         <div class="phase-tittle">Выберете Вашу фазу:</div>
         <div class="phase-choose">
-            <div id="arrow-left" ng-class="$ctrl.className" ng-click="$ctrl.moveLeft()"></div>
 
-            <a href="#" ng-class="$ctrl.className" class="first-phase" ng-click="$ctrl.setClassName(1)">1</a>
-            <a href="#" ng-class="$ctrl.className" class="second-phase" ng-click="$ctrl.setClassName(2)">2</a>
-            <a href="#" ng-class="$ctrl.className" class="third-phase" ng-click="$ctrl.setClassName(3)">3</a>
+            <div ng-class="$ctrl.className.name" class="first-phase" ng-click="$ctrl.setClassName(1)"><span>-</span> 1 <span>-</span></div>
+            <div ng-class="$ctrl.className.name" class="second-phase" ng-click="$ctrl.setClassName(2)"><span>-</span> 2 <span>-</span></div>
+            <div ng-class="$ctrl.className.name" class="third-phase" ng-click="$ctrl.setClassName(3)"><span>-</span> 3 <span>-</span></div>
 
-            <div id="arrow-right" ng-class="$ctrl.className" ng-click="$ctrl.moveRight()"></div>
         </div>
     </div>
+
+    <div class="clear-limits" ng-click="$ctrl.resetChoose()">Сбросить лимиты</div>
 </div>
 
-<div class="menu-br"></div>

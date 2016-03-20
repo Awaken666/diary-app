@@ -29,7 +29,7 @@
 
 .day-time .input .angucomplete-dropdown {
     position: absolute;
-    max-height: 15em;
+    max-height: 12em;
     width: 15.05em;
     margin-left: 1.7em;
     overflow-y: auto;
@@ -39,16 +39,26 @@
     color: black;
 }
 
-.day-time .input .angucomplete-row {
-
-}
-
 .day-time .input .add-button {
     display: inline-block;
-    margin-left: 3.2em;
+    height: 33px;
+    width: 33px;
+    margin: 0.15em 0 0 6em;
+    padding: 0.05em;
+    vertical-align: top;
+    text-align: center;
+    border: solid 3px;
+    border-radius:30px;
+    box-shadow: 0 0 10px 0 rgba(159, 134, 255, 0.6);
     font: 4em Angry-Birds, sans-serif;
-    color: rgb(228, 216, 54);
+    color: rgba(159, 134, 255, 0.6);
+    line-height: 0.45em;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.day-time .input .add-button:hover {
+    color: rgba(228, 216, 54, 1);
 }
 
 
@@ -94,5 +104,53 @@
 .day-time .table .summary span.name {
     width: 20%;
     padding-left: 0.6em;
-    text-align: left;
+    text-align: center;
 }
+
+.day-time .table .summary .active-limit {
+    background: rgba(230, 71, 89, 0.7);
+}
+
+food .food {
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+}
+
+food .food span {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    vertical-align: middle;
+    color:  rgb(193, 196, 203);
+}
+
+food .food span.name {
+    width: 19%;
+    padding: 0 0 0 19px;
+    text-align: center;
+}
+
+food .food .remove-food {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background: url("./images/remove-img.png") no-repeat center;
+    background-size: 25px 25px;
+}
+
+food .food .remove-food:hover {
+    background: url("./images/remove-img-hover.png") no-repeat center;
+    background-size: 25px 25px;
+}
+
+food .food .remove-food:hover {
+
+}
+
+food .food.empty .remove-food {
+    display: none;
+}
+
+

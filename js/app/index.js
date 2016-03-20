@@ -12,7 +12,9 @@ app
     .factory('validationService', require('./services/validation-service'))
     .factory('calculationService', require('./services/calculation-service'))
     .factory('limitsService', require('./services/limits-service'))
-    .factory('indexService', require('./services/index-service'));
+    .factory('indexService', require('./services/index-service'))
+    .factory('activeClassService', require('./services/active-class-service'))
+    .factory('dietChoose', require('./services/diet-choose-service'));
 
 
 module.exports = app;

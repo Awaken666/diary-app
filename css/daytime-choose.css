@@ -24,12 +24,24 @@
     border-bottom: solid rgb(202, 22, 41) 2px;
 }
 
-.daytime-active:hover,
-.daytime-active {
+.active-breakfast.breakfast,
+.active-first-snack.first-snack,
+.active-dinner.dinner,
+.active-second-snack.second-snack,
+.active-evening-meal.evening-meal,
+.active-breakfast.breakfast:hover,
+.active-first-snack.first-snack:hover,
+.active-dinner.dinner:hover,
+.active-second-snack.second-snack:hover,
+.active-evening-meal.evening-meal:hover {
     color: rgba(202, 22, 41, 0.9);
     border-bottom: solid rgba(202, 22, 41, 0.9) 2px;
 }
-.daytime-active:after {
+.active-breakfast.breakfast:after,
+.active-first-snack.first-snack:after,
+.active-dinner.dinner:after,
+.active-second-snack.second-snack:after,
+.active-evening-meal.evening-meal:after {
     content: '';
     position: absolute;
     width: 0;

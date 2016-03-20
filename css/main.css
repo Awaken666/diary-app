@@ -20,6 +20,7 @@ html {
     min-height: 540px;
     min-width: 890px;
     background: rgb(37, 40, 48);
+    overflow-x: auto;
 }
 
 body {

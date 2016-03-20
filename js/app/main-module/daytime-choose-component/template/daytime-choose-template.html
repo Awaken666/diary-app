@@ -2,5 +2,5 @@
     <div class="daytime"
          ng-repeat="daytime in $ctrl.daytimes"
          ng-click="$ctrl.setState(daytime)"
-         ng-class="{'daytime-active': daytime.active}" >{{ daytime.time }}</div>
+         ng-class="[$ctrl.activeClass(), daytime.state]" >{{ daytime.time }}</div>
 </div>

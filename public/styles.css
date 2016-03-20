@@ -67,6 +67,7 @@ html {
     min-height: 540px;
     min-width: 890px;
     background: rgb(37, 40, 48);
+    overflow-x: auto;
 }
 
 body {
@@ -202,12 +203,24 @@ left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}.daytime-choose {
     border-bottom: solid rgb(202, 22, 41) 2px;
 }
 
-.daytime-active:hover,
-.daytime-active {
+.active-breakfast.breakfast,
+.active-first-snack.first-snack,
+.active-dinner.dinner,
+.active-second-snack.second-snack,
+.active-evening-meal.evening-meal,
+.active-breakfast.breakfast:hover,
+.active-first-snack.first-snack:hover,
+.active-dinner.dinner:hover,
+.active-second-snack.second-snack:hover,
+.active-evening-meal.evening-meal:hover {
     color: rgba(202, 22, 41, 0.9);
     border-bottom: solid rgba(202, 22, 41, 0.9) 2px;
 }
-.daytime-active:after {
+.active-breakfast.breakfast:after,
+.active-first-snack.first-snack:after,
+.active-dinner.dinner:after,
+.active-second-snack.second-snack:after,
+.active-evening-meal.evening-meal:after {
     content: '';
     position: absolute;
     width: 0;
@@ -324,7 +337,7 @@ left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}.daytime-choose {
 
 .day-time .input .angucomplete-dropdown {
     position: absolute;
-    max-height: 15em;
+    max-height: 12em;
     width: 15.05em;
     margin-left: 1.7em;
     overflow-y: auto;
@@ -334,16 +347,26 @@ left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}.daytime-choose {
     color: black;
 }
 
-.day-time .input .angucomplete-row {
-
-}
-
 .day-time .input .add-button {
     display: inline-block;
-    margin-left: 3.2em;
+    height: 33px;
+    width: 33px;
+    margin: 0.15em 0 0 6em;
+    padding: 0.05em;
+    vertical-align: top;
+    text-align: center;
+    border: solid 3px;
+    border-radius:30px;
+    box-shadow: 0 0 10px 0 rgba(159, 134, 255, 0.6);
     font: 4em Angry-Birds, sans-serif;
-    color: rgb(228, 216, 54);
+    color: rgba(159, 134, 255, 0.6);
+    line-height: 0.45em;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.day-time .input .add-button:hover {
+    color: rgba(228, 216, 54, 1);
 }
 
 
@@ -389,6 +412,145 @@ left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}.daytime-choose {
 .day-time .table .summary span.name {
     width: 20%;
     padding-left: 0.6em;
-    text-align: left;
+    text-align: center;
 }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/
+
+.day-time .table .summary .active-limit {
+    background: rgba(230, 71, 89, 0.7);
+}
+
+food .food {
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+}
+
+food .food span {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    vertical-align: middle;
+    color:  rgb(193, 196, 203);
+}
+
+food .food span.name {
+    width: 19%;
+    padding: 0 0 0 19px;
+    text-align: center;
+}
+
+food .food .remove-food {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background: url(css/images/remove-img.png) no-repeat center;
+    background-size: 25px 25px;
+}
+
+food .food .remove-food:hover {
+    background: url(css/images/remove-img-hover.png) no-repeat center;
+    background-size: 25px 25px;
+}
+
+food .food .remove-food:hover {
+
+}
+
+food .food.empty .remove-food {
+    display: none;
+}
+
+
+menu .diet-menu {
+    margin-bottom: 2em;
+}
+
+menu .diet-menu .diet-tittle,
+menu .phase-menu .phase-tittle {
+    font: 1.6em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+menu .diet-menu .diet-choose {
+    margin: 1em auto;
+    font: 1.4em Xiomara, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+menu .diet-menu .diet {
+    margin-left: 4em;
+    cursor: pointer;
+    transition: text-shadow 0.3s;
+}
+
+menu .diet-menu .diet:hover {
+    color: rgb(230, 71, 89);
+    text-shadow: 6px -2px 10px rgb(230, 71, 89);
+}
+
+menu .diet-menu .diet.active {
+    color: rgb(230, 71, 89);
+    border-bottom: solid 1px rgb(230, 71, 89);
+    text-shadow: 4px -2px 10px rgb(230, 71, 89);
+}
+
+menu .diet-menu .diet.active-add-active {
+    text-shadow: 4px -2px 2px rgb(230, 71, 89);
+}
+
+menu .diet-menu br {
+
+}
+
+menu .phase-menu .phase-choose {
+    margin-top: 1.7em;
+}
+
+menu .phase-menu .phase-choose div {
+    display: inline;
+    margin-left: 2.3em;
+    text-decoration: none;
+    font: 3em Xiomara, sans-serif;
+    color: rgba(193, 196, 203, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+menu .phase-menu .phase-choose div:hover {
+    color: rgb(193, 196, 203);
+    text-shadow: 0 0 10px rgba(193, 196, 203, 0.7);
+}
+
+menu .phase-menu .phase-choose div.start {
+    color: rgb(193, 196, 203);
+}
+
+menu .phase-menu .phase-choose div.start:hover {
+    color: rgb(230, 71, 89);
+    text-shadow: none;
+}
+
+menu .phase-menu .phase-choose div.first-phase.active1,
+menu .phase-menu .phase-choose div.second-phase.active2,
+menu .phase-menu .phase-choose div.third-phase.active3 {
+    color: rgb(230, 71, 89);
+    text-shadow: 0 0 10px rgba(230, 71, 89, 0.7);
+}
+
+menu .clear-limits {
+    display: inline-block;
+    margin-top: 3em;
+    padding: 0.5em;
+    border: solid rgb(230, 71, 89) 1px;
+    border-radius: 6px;
+    color: rgb(230, 71, 89);
+    cursor: pointer;
+}
+
+menu .clear-limits:hover {
+    background: rgba(230, 71, 89, 0.7);
+
+    color: white;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/

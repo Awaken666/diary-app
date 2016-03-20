@@ -10,7 +10,7 @@ const food = {
     controller: function() {
         this.checkEmptyFood = function(food) {
             if (isNaN(food.kall)) return 'empty'
-        }
+        };
     },
     template: foodTemplate
 };

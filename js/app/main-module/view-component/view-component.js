@@ -3,8 +3,7 @@
 const viewTemplate = require('./template/view-template.html');
 
 const view = {
-    controller: function (dataService, limitsService, $window, $stateParams, indexService) {
-
+    controller: function (dataService, limitsService, $window, $stateParams, $state, $timeout) {
         const empty = {
             empty: true,
             name: '---------',
@@ -19,6 +18,7 @@ const view = {
         this.viewData = {
             limitsData: limitsService.limitsData
         };
+
 
         if ($window.localStorage.saveData) {
             let data = JSON.parse($window.localStorage.saveData);
@@ -79,11 +79,6 @@ const view = {
             }
         };
 
-        this.defineIndex = function () {
-
-            return this.viewData.dayTimes[index];
-
-        }
     },
     template: viewTemplate
 };

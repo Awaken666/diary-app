@@ -45,6 +45,7 @@ module.exports = function($timeout, validationService, limitsService, $window, m
                 diets.proteins = false;
                 className.name = 'start';
 
+                $window.sessionStorage.removeItem('savedLimits');
                 limitsService.clearLimits();
             });
     }

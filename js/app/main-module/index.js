@@ -37,7 +37,7 @@ main.config(function($stateProvider) {
         })
         .state('save', {
             url: '/save',
-            template: '<save-menu></save-menu>'
+            template: '<save-menu day-times-data="$ctrl.viewData.dayTimes" result="$ctrl.viewData.resultFinal"></save-menu>'
         });
 });
 

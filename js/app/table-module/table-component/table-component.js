@@ -4,8 +4,7 @@ const tableTemplate = require('./template/table-template.html');
 
 const table = {
     bindings: {
-        foodsObj: '<',
-        remove: '&'
+        foodsObj: '<'
     },
     controller: function() {
 

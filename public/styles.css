@@ -80,12 +80,13 @@ body {
     position: relative;
     margin: 3em 6em 0 13em;
 }.left-side-menu {
-    float: left;
+    position: fixed;
     width: 4.3em;
     height: 100%;
     margin-right: 7em;
     background: rgb(48, 52, 62);
     overflow-x: visible;
+    z-index: 99;
 }
 
 
@@ -446,6 +447,7 @@ food .food .remove-food {
     vertical-align: middle;
     background: url(css/images/remove-img.png) no-repeat center;
     background-size: 25px 25px;
+    cursor: pointer;
 }
 
 food .food .remove-food:hover {
@@ -509,7 +511,7 @@ menu .phase-menu .phase-choose {
 
 menu .phase-menu .phase-choose div {
     display: inline;
-    margin-left: 2.3em;
+    margin-left: 2.1em;
     text-decoration: none;
     font: 3em Xiomara, sans-serif;
     color: rgba(193, 196, 203, 0.2);
@@ -550,7 +552,363 @@ menu .clear-limits {
 
 menu .clear-limits:hover {
     background: rgba(230, 71, 89, 0.7);
+    color: white;
+}result .result .result-title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
 
+result .result .result-table {
+    display: inline-block;
+    width: 30%;
+    margin:3em 0 3em 6%;
+    border: solid rgb(67, 72, 87) 1px;
+    border-radius: 4px;
+}
+
+result .result .result-table .title {
+    padding: 0.6em;
+    border-bottom: solid rgb(67, 72, 87) 1px;
+    font: 1.2em Angry-Birds, sans-serif;
     color: white;
 }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/
+
+result .result .result-table .value {
+    position: relative;
+    padding: 0.6em;
+    font: 1.2em Xiorama, sans-serif;
+    text-align: center;
+    color: rgb(193, 196, 203);
+}
+
+result .result .result-table .title span {
+    float: right;
+    font: 0.6em Xiorama, sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+result .result .result-table .value.limits {
+    text-align: left;
+}
+
+result .result .result-table .value.limits span {
+    float: right;
+    font: 0.8em Xiorama, sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+result .result .result-table .value.limits .graph {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}modal .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Hangyaboly, sans-serif;
+    color: rgb(120, 120, 120);
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 9999;
+    transition: 0.4s;
+}
+
+modal .modal-background .window {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    width: 35%;
+    margin-left: -18%;
+    border-radius: 7px;
+    background-color: white;
+    transition: 1s;
+}
+
+modal .modal-background.ng-leave.ng-leave-active,
+modal .modal-background.ng-enter {
+    top: -20em;
+    opacity: 0;
+}
+
+modal .modal-background.ng-enter.ng-enter-active,
+modal .modal-background.ng-leave {
+    top: 0;
+    opacity: 1;
+}
+
+modal .modal-background .window .title,
+modal .modal-background .window .message {
+    width: 100%;
+    height: 30%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+modal .modal-background .window .title {
+    font-size: 1.4em;
+    font-weight: bold;
+    border-bottom: solid rgb(229, 229, 229) 1px;
+}
+
+modal .modal-background .window .message {
+    font-size: 1.2em;
+    padding-left: 1.2em;
+    border-bottom: solid rgb(229, 229, 229) 1px;
+}
+
+modal .modal-background .window .buttons {
+    width: 100%;
+    height: 30%;
+    padding: 1.2em 0;
+}
+
+modal .modal-background .window .close {
+    position: absolute;
+    top: 0.2em;
+    right: 1em;
+    font: 1.5em Xiomara, sans-serif;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+modal .modal-background .window .close:hover {
+    color: rgb(37, 40, 48);
+}
+
+modal .modal-background .window .alert,
+modal .modal-background .window .ok,
+modal .modal-background .window .reject {
+    float: right;
+    margin-right: 1.4em;
+    padding: 0.5em 0.7em;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+modal .modal-background .window .ok {
+    background-color: rgba(27, 201, 142, 0.85);
+    border: solid rgb(27, 201, 142) 1px;
+}
+
+modal .modal-background .window .reject{
+    background-color: rgba(230, 71, 89, 0.85);
+    border: solid rgb(230, 71, 89) 1px;
+}
+
+modal .modal-background .window .alert {
+    background-color: rgb(28, 168, 221);
+    border: solid rgb(25, 151, 198) 1px;
+}
+
+modal .modal-background .window .ok:hover {
+    background: rgb(27, 201, 142);
+}
+
+modal .modal-background .window .reject:hover {
+    background: rgb(230, 71, 89);
+}
+
+modal .modal-background .window .alert:hover {
+    background-color: rgb(22, 134, 176);
+}
+
+modal .group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}tables .tables-list {
+    float: left;
+    width: 42%;
+}
+
+tables .table-container {
+    float: right;
+    width: 53%;
+}
+
+tables .tables-list .title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+tables .tables-list .list {
+    margin: 1em auto;
+    font: 1.4em Xiomara, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+tables .tables-list .list div {
+    margin-top: 0.7em;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+tables .tables-list .list div:hover {
+    color: rgba(230, 71, 89, 0.9);
+    text-shadow: 2px -2px 10px rgb(230, 71, 89);
+}
+
+tables .tables-list .list div.active-table-title {
+    color: rgba(230, 71, 89, 0.9);
+    text-shadow: 2px -2px 10px rgb(230, 71, 89);
+}
+
+tables table.tb,
+storage-table table.tb {
+    margin-bottom: 2em;
+    border: solid rgb(67, 72, 87) 1px;
+    border-radius: 4px;
+}
+
+tables table.tb caption.tb-title,
+storage-table table.tb caption.tb-title {
+    padding: 4px 0;
+    font: 1.5em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+tables table.tb tr td,
+storage-table table.tb tr td {
+    border: solid rgb(67, 72, 87) 1px;
+    padding: 0.4em;
+    width: 11%;
+    font-family: Hangyaboly, sans-serif;
+    color: rgba(193, 196, 203, 0.7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+storage-table table.tb tr td.td-name,
+tables table.tb tr td.td-name {
+    width: 45%;
+    text-align: left;
+    padding-left: 10px;
+    border-right: double rgb(67, 72, 87) 5px;
+}
+
+storage-table table.tb td.color.name-color,
+tables table.tb td.color.name-color {
+    background: rgba(204, 173, 198, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.portion-color,
+tables table.tb td.color.portion-color {
+    background: rgba(216, 169, 156, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.carbohyd-color,
+tables table.tb td.color.carbohyd-color {
+    background: rgba(160, 210, 157, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.prot-color,
+tables table.tb td.color.prot-color {
+    background: rgba(255, 226, 36, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.fat-color,
+tables table.tb td.color.fat-color {
+    background: rgba(242, 201, 187, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.kall-color,
+tables table.tb td.color.kall-color {
+    background: rgba(181, 255, 248, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb tr.my-food:hover,
+tables table.tb tr.my-food:hover {
+    background:  rgba(255, 82, 82, 0.5);
+    cursor: pointer;
+}
+table-add .my-table {
+    display: inline-block;
+    position: relative;
+    width: 44%;
+    margin-left: 6em;
+    vertical-align: top;
+}
+
+table-add .add-to-table-form {
+    display: inline-block;
+    margin-bottom: 4em;
+}
+
+table-add .add-to-table-form table {
+    margin-top: 1em;
+}
+
+table-add .add-to-table-form form label {
+    margin-top: 1.2em;
+    margin-left: 1.2em;
+    font: 1.4em Angry-Birds, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+table-add .add-to-table-form form  input {
+    margin-left: 2.8em;
+    padding-left: 0.2em;
+    vertical-align: middle;
+    line-height: 1.5em;
+    background-color: rgb(67, 72, 87);
+    border: none;
+    border-radius: 5px;
+}
+
+table-add .add-to-table-form form  input:focus {
+    outline: none;
+    background-color: rgb(200, 203, 213);
+}
+
+table-add .add-to-table-form form td {
+    padding: 0.6em 0;
+}
+
+table-add .add-to-table-form .add-form-title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+table-add .add-to-table-form form .add-to-table-button {
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    margin: 0.5em 0 0 6em;
+    padding: 0.05em;
+    vertical-align: top;
+    text-align: center;
+    border: solid 3px;
+    border-radius:30px;
+    box-shadow: 0 0 10px 0 rgba(159, 134, 255, 0.6);
+    font: 4em Angry-Birds, sans-serif;
+    color: rgba(159, 134, 255, 0.6);
+    line-height: 0.45em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+table-add .add-to-table-form form .add-to-table-button:hover {
+    color: rgba(228, 216, 54, 1);
+}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyIsInNvdXJjZVJvb3QiOiIifQ==*/

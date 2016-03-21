@@ -6,7 +6,8 @@ main
     .component('leftSideMenu', require('./left-side-menu-component/left-side-menu-component'))
     .component('daytimeChoose', require('./daytime-choose-component/daytime-choose-component'))
     .component('home', require('./home-page-module/home-page-component'))
-    .component('view', require('./view-component/view-component'));
+    .component('view', require('./view-component/view-component'))
+    .component('modal', require('./modal-window-component/modal-window-component'));
 
 main.config(function($stateProvider) {
     $stateProvider
@@ -25,6 +26,18 @@ main.config(function($stateProvider) {
         .state('result', {
             url: '/result',
             template: '<result result="$ctrl.viewData.resultFinal"></result>'
+        })
+        .state('tables', {
+            url: '/tables',
+            template: '<tables foods-objs="$ctrl.viewData.tablesData.foodsObjs" my-foods="$ctrl.viewData.tablesData.myFoods" remove-my-food="$ctrl.removeMyFood(name)"></tables>'
+        })
+        .state('add-food', {
+            url: '/add-food',
+            template: '<table-add my-foods="$ctrl.viewData.tablesData.myFoods" remove-my-food="$ctrl.removeMyFood(name)" add-my-food="$ctrl.addMyFood(name, values)"></table-add>'
+        })
+        .state('save', {
+            url: '/save',
+            template: '<save-menu></save-menu>'
         });
 });
 

@@ -4,9 +4,12 @@ const addToTableTemplate = require('./template/add-to-table-template.html');
 
 const addToTable = {
     bindings: {
+        myFoods: '<',
+        removeMyFood: '&',
         addMyFood: '&'
     },
     controller: function (validationService) {
+        console.log('test');
         this.values = [0, 0, 0, 0, 0];
 
         this.add = function(event) {
@@ -20,6 +23,10 @@ const addToTable = {
             this.addMyFood({name: this.name, values: this.values});
             this.values = [0, 0, 0, 0, 0];
             this.name = '';
+        };
+
+        this.remove = function(name) {
+            this.removeMyFood({name: name})
         }
     },
     template: addToTableTemplate

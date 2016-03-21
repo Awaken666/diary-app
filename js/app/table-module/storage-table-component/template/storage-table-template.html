@@ -9,7 +9,7 @@
         <td class="kall-color color">Калории</td>
     </tr>
 
-    <tr class="my-food" ng-repeat="(foodName, values) in $ctrl.myFoods" ng-click="$ctrl.removeMyFood({name: foodName})">
+    <tr class="my-food" ng-repeat="(foodName, values) in $ctrl.myFoods" ng-click="$ctrl.remove({name: foodName})">
         <td class="td-name">{{ foodName }}</td>
         <td>{{ values[0] }}</td>
         <td>{{ values[1] }}</td>

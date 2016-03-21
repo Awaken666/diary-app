@@ -3,14 +3,13 @@
 const leftSideMenuTemplate = require('./template/left-side-menu-template.html');
 
 const leftSideMenu = {
-    controller: function ($state, activeClassService) {
+    controller: function ($state, activeClassService, modal) {
         this.activeClass = activeClassService.getClassName;
 
         this.menuItems = [
             {className: 'home', tooltip: 'На главную', tooltipShow: false},
             {className: 'settings', tooltip: 'Настройки', tooltipShow: false},
             {className: 'result', tooltip: 'Итог дня', tooltipShow: false},
-            {className: 'print', tooltip: 'Для печати', tooltipShow: false},
             {className: 'save', tooltip: 'Сохранить', tooltipShow: false},
             {className: 'tables', tooltip: 'Таблицы', tooltipShow: false},
             {className: 'add-food', tooltip: 'Добавить еду в таблицу', tooltipShow: false}

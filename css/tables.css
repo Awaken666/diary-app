@@ -1,0 +1,118 @@
+tables .tables-list {
+    float: left;
+    width: 42%;
+}
+
+tables .table-container {
+    float: right;
+    width: 53%;
+}
+
+tables .tables-list .title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+tables .tables-list .list {
+    margin: 1em auto;
+    font: 1.4em Xiomara, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+tables .tables-list .list div {
+    margin-top: 0.7em;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+tables .tables-list .list div:hover {
+    color: rgba(230, 71, 89, 0.9);
+    text-shadow: 2px -2px 10px rgb(230, 71, 89);
+}
+
+tables .tables-list .list div.active-table-title {
+    color: rgba(230, 71, 89, 0.9);
+    text-shadow: 2px -2px 10px rgb(230, 71, 89);
+}
+
+tables table.tb,
+storage-table table.tb {
+    margin-bottom: 2em;
+    border: solid rgb(67, 72, 87) 1px;
+    border-radius: 4px;
+}
+
+tables table.tb caption.tb-title,
+storage-table table.tb caption.tb-title {
+    padding: 4px 0;
+    font: 1.5em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+tables table.tb tr td,
+storage-table table.tb tr td {
+    border: solid rgb(67, 72, 87) 1px;
+    padding: 0.4em;
+    width: 11%;
+    font-family: Hangyaboly, sans-serif;
+    color: rgba(193, 196, 203, 0.7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+storage-table table.tb tr td.td-name,
+tables table.tb tr td.td-name {
+    width: 45%;
+    text-align: left;
+    padding-left: 10px;
+    border-right: double rgb(67, 72, 87) 5px;
+}
+
+storage-table table.tb td.color.name-color,
+tables table.tb td.color.name-color {
+    background: rgba(204, 173, 198, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.portion-color,
+tables table.tb td.color.portion-color {
+    background: rgba(216, 169, 156, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.carbohyd-color,
+tables table.tb td.color.carbohyd-color {
+    background: rgba(160, 210, 157, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.prot-color,
+tables table.tb td.color.prot-color {
+    background: rgba(255, 226, 36, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.fat-color,
+tables table.tb td.color.fat-color {
+    background: rgba(242, 201, 187, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.kall-color,
+tables table.tb td.color.kall-color {
+    background: rgba(181, 255, 248, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb tr.my-food:hover,
+tables table.tb tr.my-food:hover {
+    background:  rgba(255, 82, 82, 0.5);
+    cursor: pointer;
+}

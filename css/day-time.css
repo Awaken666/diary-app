@@ -138,6 +138,7 @@ food .food .remove-food {
     vertical-align: middle;
     background: url("./images/remove-img.png") no-repeat center;
     background-size: 25px 25px;
+    cursor: pointer;
 }
 
 food .food .remove-food:hover {

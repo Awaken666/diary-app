@@ -1,3 +1,16 @@
 <div class="result">
-    <div class="title">Итог дня</div>
+    <div class="result-title">Итог дня</div>
+
+    <div class="result-table" ng-repeat="(key, element) in $ctrl.result">
+        <div class="title" ng-class="{}">
+            {{element.name}} <span ng-if="!!$ctrl.limitsData.limits">(max {{$ctrl.limitsData.limits['Итог'][key]}})</span>
+        </div>
+        <div class="value" ng-class="{'limits': !!$ctrl.limitsData.limits}">
+            {{element.value}}
+            <span ng-if="!!$ctrl.limitsData.limits">{{ $ctrl.calcPercent(element.value, $ctrl.limitsData.limits['Итог'][key]) }}</span>
+            <div class="graph" ng-if="!!$ctrl.limitsData.limits" ng-style="$ctrl.calcGraph(element.value, $ctrl.limitsData.limits['Итог'][key])"></div>
+        </div>
+    </div>
+
+
 </div>

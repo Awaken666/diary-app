@@ -1,0 +1,53 @@
+result .result .result-title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+result .result .result-table {
+    display: inline-block;
+    width: 30%;
+    margin:3em 0 3em 6%;
+    border: solid rgb(67, 72, 87) 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+result .result .result-table .title {
+    padding: 0.6em;
+    border-bottom: solid rgb(67, 72, 87) 1px;
+    font: 1.2em Angry-Birds, sans-serif;
+    color: white;
+}
+
+result .result .result-table .value {
+    position: relative;
+    padding: 0.6em;
+    font: 1.2em Xiorama, sans-serif;
+    text-align: center;
+    color: rgb(193, 196, 203);
+}
+
+result .result .result-table .title span {
+    float: right;
+    font: 0.6em Xiorama, sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+result .result .result-table .value.limits {
+    text-align: left;
+}
+
+result .result .result-table .value.limits span {
+    float: right;
+    font: 0.8em Xiorama, sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+result .result .result-table .value.limits .graph {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}

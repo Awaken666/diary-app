@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function($timeout, validationService, limitsService, $window) {
+module.exports = function($timeout, validationService, limitsService, $window, modal) {
     var diets = {
         carbohydrates: false,
         proteins: false
@@ -33,11 +33,20 @@ module.exports = function($timeout, validationService, limitsService, $window) {
     }
 
     function resetChoose() {
-        diets.carbohydrates = false;
-        diets.proteins = false;
-        className.name = 'start';
+        if (!limitsService.limitsData.limits) {
+            diets.carbohydrates = false;
+            diets.proteins = false;
+            className.name = 'start';
+            return;
+        }
+        modal.open({title: 'Подтверждение', message: 'Вы точно хотите сбросить установленные лимиты?'}, 'confirm')
+            .then(() => {
+                diets.carbohydrates = false;
+                diets.proteins = false;
+                className.name = 'start';
 
-        limitsService.clearLimits();
+                limitsService.clearLimits();
+            });
     }
 
     if ($window.localStorage.savedLimits) {

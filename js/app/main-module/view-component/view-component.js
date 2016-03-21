@@ -16,9 +16,16 @@ const view = {
 
         this.base = dataService.base;
         this.viewData = {
-            limitsData: limitsService.limitsData
+            limitsData: limitsService.limitsData,
+            tablesData: {}
         };
 
+        dataService.getTableData()
+            .then((data) => {
+                this.viewData.tablesData.foodsObjs = data;
+            });
+
+        if ($window.localStorage.myFoods) this.viewData.tablesData.myFoods = JSON.parse($window.localStorage.myFoods);
 
         if ($window.localStorage.saveData) {
             let data = JSON.parse($window.localStorage.saveData);
@@ -29,10 +36,10 @@ const view = {
                 .then((data) => this.viewData.dayTimes = data.data);
 
             this.viewData.resultFinal = {
-                carbohyd: 0,
-                prot: 0,
-                fat: 0,
-                kall: 0
+                carbohyd: {name: 'Угдеводы', value: 0},
+                prot: {name: 'Протеины', value: 0},
+                fat: {name: 'Жиры', value: 0},
+                kall: {name: 'Калории', value: 0}
             }
         }
 
@@ -69,15 +76,34 @@ const view = {
             if (bool) {
                 for (let key in result) {
                     result[key] += food[key];
-                    this.viewData.resultFinal[key] += food[key];
+                    this.viewData.resultFinal[key].value += food[key];
                 }
             } else {
                 for (let key in result) {
                     result[key] -= food[key];
-                    this.viewData.resultFinal[key] -= food[key];
+                    this.viewData.resultFinal[key].value -= food[key];
                 }
             }
         };
+
+        this.removeMyFood = function(name) {
+
+            delete this.viewData.tablesData.myFoods[name];
+            $window.localStorage.myFoods = JSON.stringify(this.viewData.tablesData.myFoods);
+
+            dataService.removeFromBase(name);
+        };
+
+        this.addMyFood = function(name, values) {
+            if (this.viewData.tablesData.myFoods[name]) {
+                if (!confirm('Перезаписать существующий продукт?')) return;
+                dataService.removeFromBase(name);
+            }
+            this.viewData.tablesData.myFoods[name] = values;
+            $window.localStorage.myFoods = JSON.stringify(this.viewData.tablesData.myFoods);
+
+            dataService.addToBase(name, values);
+        }
 
     },
     template: viewTemplate

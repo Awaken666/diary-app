@@ -14,7 +14,8 @@ app
     .factory('limitsService', require('./services/limits-service'))
     .factory('indexService', require('./services/index-service'))
     .factory('activeClassService', require('./services/active-class-service'))
-    .factory('dietChoose', require('./services/diet-choose-service'));
+    .factory('dietChoose', require('./services/diet-choose-service'))
+    .factory('modal', require('./services/modal-service'));
 
 
 module.exports = app;

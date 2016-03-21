@@ -5,7 +5,7 @@ const storageTableTemplate = require('./template/storage-table-template.html');
 const storageTable = {
     bindings: {
         myFoods: '<',
-        removeMyFood: '&'
+        remove: '&'
     },
     controller: function() {
         this.show = function() {

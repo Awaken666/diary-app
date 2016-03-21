@@ -1,0 +1,120 @@
+modal .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Hangyaboly, sans-serif;
+    color: rgb(120, 120, 120);
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 9999;
+    transition: 0.4s;
+}
+
+modal .modal-background .window {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    width: 35%;
+    margin-left: -18%;
+    border-radius: 7px;
+    background-color: white;
+    transition: 1s;
+}
+
+modal .modal-background.ng-leave.ng-leave-active,
+modal .modal-background.ng-enter {
+    top: -20em;
+    opacity: 0;
+}
+
+modal .modal-background.ng-enter.ng-enter-active,
+modal .modal-background.ng-leave {
+    top: 0;
+    opacity: 1;
+}
+
+modal .modal-background .window .title,
+modal .modal-background .window .message {
+    width: 100%;
+    height: 30%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+modal .modal-background .window .title {
+    font-size: 1.4em;
+    font-weight: bold;
+    border-bottom: solid rgb(229, 229, 229) 1px;
+}
+
+modal .modal-background .window .message {
+    font-size: 1.2em;
+    padding-left: 1.2em;
+    border-bottom: solid rgb(229, 229, 229) 1px;
+}
+
+modal .modal-background .window .buttons {
+    width: 100%;
+    height: 30%;
+    padding: 1.2em 0;
+}
+
+modal .modal-background .window .close {
+    position: absolute;
+    top: 0.2em;
+    right: 1em;
+    font: 1.5em Xiomara, sans-serif;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+modal .modal-background .window .close:hover {
+    color: rgb(37, 40, 48);
+}
+
+modal .modal-background .window .alert,
+modal .modal-background .window .ok,
+modal .modal-background .window .reject {
+    float: right;
+    margin-right: 1.4em;
+    padding: 0.5em 0.7em;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+modal .modal-background .window .ok {
+    background-color: rgba(27, 201, 142, 0.85);
+    border: solid rgb(27, 201, 142) 1px;
+}
+
+modal .modal-background .window .reject{
+    background-color: rgba(230, 71, 89, 0.85);
+    border: solid rgb(230, 71, 89) 1px;
+}
+
+modal .modal-background .window .alert {
+    background-color: rgb(28, 168, 221);
+    border: solid rgb(25, 151, 198) 1px;
+}
+
+modal .modal-background .window .ok:hover {
+    background: rgb(27, 201, 142);
+}
+
+modal .modal-background .window .reject:hover {
+    background: rgb(230, 71, 89);
+}
+
+modal .modal-background .window .alert:hover {
+    background-color: rgb(22, 134, 176);
+}
+
+modal .group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

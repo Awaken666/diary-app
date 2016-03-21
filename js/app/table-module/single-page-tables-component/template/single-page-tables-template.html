@@ -1,0 +1,14 @@
+<div class="tables-list">
+    <div class="title">Таблицы</div>
+    <div class="list">
+        <div ng-repeat="obj in $ctrl.foodsObjs" ng-click="$ctrl.showTable(obj.$$hashKey)" ng-class="{'active-table-title': $ctrl.$$hashKey === obj.$$hashKey}">
+            - {{obj.title}}
+        </div>
+        <div ng-if="$ctrl.showMyFoodTitle()" ng-click="$ctrl.showTable('add-food')" ng-class="{'active-table-title': $ctrl.$$hashKey === 'add-food'}">- Добавленные продукты</div>
+    </div>
+</div>
+
+<div class="table-container">
+    <food-table ng-repeat="foodsObj in $ctrl.foodsObjs" foods-obj="foodsObj" ng-if="$ctrl.$$hashKey === foodsObj.$$hashKey"></food-table>
+    <storage-table my-foods="$ctrl.myFoods" remove="$ctrl.remove(name)" ng-if="$ctrl.$$hashKey === 'add-food'"></storage-table>
+</div>

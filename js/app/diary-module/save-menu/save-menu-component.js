@@ -7,38 +7,52 @@ const saveMenu = {
         dayTimesData: '<',
         result: '<'
     },
-    controller: function($window, validationService) {
-        this.active = false;
-
-        this.toggle = function() {
-            this.active = !this.active;
-        };
+    controller: function($window, modal) {
 
         this.saveForPrint = function() {
             let data = $window.localStorage.daysData ? JSON.parse($window.localStorage.daysData) : [];
             //Проверки
             if (data.length > 0 && new Date(data[data.length - 1].saveTime).getDay() === new Date().getDay()) {
                 if (data[data.length - 1].saveTimeId === $window.localStorage._lastSaveId) {
-                    alert('Нет новых данных для сохранения');
+                    modal.open({title: 'Ошибка сохранения', message: 'Нет новых данных для сохранения'}, 'alert');
                     return;
                 }
-                if (!confirm('Перезаписать данные печати текушего дня?')) return;
-                data.pop();
+                modal.open({title: 'Подтвердите', message: 'Перезаписать данные печати текушего дня?'}, 'confirm')
+                    .then(() => {
+                        data.pop();
+
+                        //Сохранение
+                        let date = new Date();
+                        let id = (Math.random() + '').slice(2);
+                        let dayData = {saveTime: date, dayTimes: this.dayTimesData, result: this.result, saveTimeId: id};
+                        data.push(dayData);
+                        $window.localStorage.daysData = JSON.stringify(data);
+                        $window.localStorage._lastSaveId = id;
+
+                        modal.open({title: 'Сохранение данных', message: 'Данные успешно сохранены'}, 'alert');
+                    });
+
+
+            } else {
+                //Сохранение
+                let date = new Date();
+                let id = (Math.random() + '').slice(2);
+                let dayData = {saveTime: date, dayTimes: this.dayTimesData, result: this.result, saveTimeId: id};
+                data.push(dayData);
+                $window.localStorage.daysData = JSON.stringify(data);
+                $window.localStorage._lastSaveId = id;
+                modal.open({title: 'Сохранение данных', message: 'Данные успешно сохранены'}, 'alert');
             }
-            //Сохранение
-            let date = new Date();
-            let id = (Math.random() + '').slice(2);
-            let dayData = {saveTime: date, dayTimes: this.dayTimesData, result: this.result, saveTimeId: id};
-            data.push(dayData);
-            $window.localStorage.daysData = JSON.stringify(data);
-            $window.localStorage._lastSaveId = id;
-            alert('Данные успешно сохранены');
+
         };
 
         this.removePrintSaves = function() {
-            if ($window.localStorage.daysData && confirm('Удалить сохранения для печати?')) {
-                $window.localStorage.removeItem('daysData');
-                $window.localStorage.removeItem('_lastSaveId');
+            if ($window.localStorage.daysData) {
+                modal.open({title: 'Удаление', message: 'Удалить сохранения для печати?'}, 'confirm')
+                    .then(() => {
+                        $window.localStorage.removeItem('daysData');
+                        $window.localStorage.removeItem('_lastSaveId');
+                    });
             }
         };
 
@@ -46,26 +60,35 @@ const saveMenu = {
         this.preview = function() {
             let data = $window.localStorage.daysData;
             if (!data) {
-                if (confirm('Сохранить текущие данные для просмотра?')) {
-                    this.saveForPrint();
-                } else {
-                    alert('Нет данных для просмотра!');
-                    return;
-                }
+                modal.open({title: 'Сохранение', message: 'Сохранить текущие данные для просмотра?'}, 'confirm')
+                    .then(() => {
+                        this.saveForPrint();
+                        $window.open('./print.html');
+                    }, () => {
+                        modal.open({title: 'Ошибка предпросмотра', message: 'Нет данных для просмотра!'}, 'alert');
+                    });
             } else {
                 data = JSON.parse(data);
-                if (data[data.length - 1].saveTimeId !== $window.localStorage._lastSaveId && confirm('Сохранить данные для просмотра?')) this.saveForPrint();
+                if (data[data.length - 1].saveTimeId !== $window.localStorage._lastSaveId) {
+                    modal.open({title: 'Сохранение', message: 'Сохранить данные для просмотра?'}, 'confirm')
+                        .then(() => {
+                            this.saveForPrint();
+                            $window.open('./print.html');
+                        }, () => $window.open('./print.html'));
+                }
             }
 
-            $window.open('./print.html');
+
         };
 
         this.saveData = function() {
-            if (confirm('Сохранить текущие данные?')) {
-                $window.localStorage.saveData = JSON.stringify({daysData: this.dayTimesData, resultFinal: this.result});
-                $window.localStorage.savedLimits = $window.sessionStorage.savedLimits;
-                alert('Данные успешно сохранены');
-            }
+            modal.open({title: 'Сохранение', message: 'Сохранить текущие данные?'}, 'confirm')
+                .then(() => {
+                    $window.localStorage.saveData = JSON.stringify({daysData: this.dayTimesData, resultFinal: this.result});
+                    $window.localStorage.savedLimits = $window.sessionStorage.savedLimits;
+                    modal.open({title: 'Сохранение данных', message: 'Данные успешно сохранены'}, 'alert');
+                });
+
         }
     },
     template: saveMenuTemplate

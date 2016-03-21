@@ -9,3 +9,4 @@ require('./result.css');
 require('./modal-window.css');
 require('./tables.css');
 require('./add-food.css');
+require('./save-menu.css');

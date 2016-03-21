@@ -1,11 +1,17 @@
 <div class="save-menu">
+    <div class="title">Управление данными</div>
 
-    <div class="save-button group" ng-click="$ctrl.saveData()">Сохранить изменения</div>
-    <div class="print-title">Для печати</div>
-    <div class="print-menu group">
-        <div class="to-print" ng-click="$ctrl.preview()">Предпросмотр</div>
-        <div class="print-to-localStorage" ng-click="$ctrl.saveForPrint()">Сохранить для печати</div>
-        <div class="delte-print-localStorage" ng-click="$ctrl.removePrintSaves()">Удалить сохранения</div>
+    <div>
+        <div class="button save-button" ng-click="$ctrl.saveData()">Сохранить изменения</div>
+        <div class="button remove-data">Удалить сщхранения</div>
+    </div>
+
+    <div class="title">Для печати</div>
+
+    <div class="print-menu">
+        <div class="button to-print" ng-click="$ctrl.preview()">Предпросмотр</div>
+        <div class="button print-to-localStorage" ng-click="$ctrl.saveForPrint()">Сохранить для печати</div>
+        <div class="button remove-print-localStorage" ng-click="$ctrl.removePrintSaves()">Удалить сохранения</div>
     </div>
 </div>
 

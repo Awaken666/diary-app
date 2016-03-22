@@ -29,6 +29,10 @@ module.exports = function(dataService) {
             alert('Введите наименование продукта');
             success = false;
             return;
+        } else if (values[0] <= 0) {
+            alert('Порция не может быть меньше или равна нулю');
+            success = false;
+            return;
         }
         values.forEach((value) => {
             if (isNaN(value)|| value < 0) {

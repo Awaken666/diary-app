@@ -97,7 +97,10 @@ module.exports = function($http, $window) {
             })
     }
 
+    let loading = true;
+
     if ($window.localStorage.saveData && !confirm('Загрузить сохранения?')) {
+        loading = false;
         if (confirm('Удалить имеющиеся сохранения?')) {
             $window.localStorage.removeItem('saveData');
             $window.localStorage.removeItem('savedLimits');
@@ -105,6 +108,7 @@ module.exports = function($http, $window) {
     }
 
     return {
+        loading: loading,
         base: base,
         addToBase: addToBase,
         removeFromBase: removeFromBase,

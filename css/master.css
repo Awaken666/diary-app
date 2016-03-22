@@ -19,6 +19,21 @@ html, body {
     min-width: 950px;
 }
 
+#to-another-design {
+    position: fixed;
+    font: 1.2em TS2, sans-serif;
+    top: 0.3em;
+    left: 0.3em;
+    color: black;
+    opacity: 0.2;
+    transition: 0.3s;
+}
+
+#to-another-design:hover {
+    color: black;
+    opacity: 1;
+}
+
 header {
     height: 3em;
     margin: -0.4em auto;

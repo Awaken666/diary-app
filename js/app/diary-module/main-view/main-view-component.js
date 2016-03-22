@@ -19,7 +19,7 @@ const mainView = {
             limitsData: limitsService.limitsData
         };
 
-        if ($window.localStorage.saveData) {
+        if ($window.localStorage.saveData && dataService.loading) {
             let data = JSON.parse($window.localStorage.saveData);
             this.viewData.dayTimes = data.daysData;
             this.viewData.resultFinal = data.resultFinal;

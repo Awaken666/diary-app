@@ -3,7 +3,7 @@
 var menuTemplate = require('./template/menu-template.html');
 
 const menu = {
-    controller: function ($window, $timeout, validationService, limitsService) {
+    controller: function ($window, $timeout, validationService, limitsService, dataService) {
         this.carbohydrates = false;
         this.proteins = false;
 
@@ -50,7 +50,7 @@ const menu = {
             $window.sessionStorage.savedLimits = JSON.stringify({diet: diet, phaseId: phase});
         };
 
-        if ($window.localStorage.savedLimits) {
+        if ($window.localStorage.savedLimits && dataService.loading) {
             let data = JSON.parse($window.localStorage.savedLimits);
             this.setDiet(data.diet);
             this.setClassName(data.phaseId)

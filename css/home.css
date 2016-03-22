@@ -15,7 +15,7 @@
 }
 
 .home-page h2 {
-    margin-top: 3.5em;
+    margin-top: 3em;
     font-family: Angry-Birds, Verdana, sans-serif;
     font-size: 2em;
     text-align: center;
@@ -34,6 +34,12 @@
     font: 1.2em Xiomara, sans-serif;
     white-space: pre;
     color: white;
+    opacity: 0;
+    transition: 7s;
+}
+
+.home-page .daytime-select-tooltip.active {
+    opacity: 1;
 }
 
 .home-page .daytime-select-tooltip:after {
@@ -51,7 +57,7 @@
 .home-page .menu-select-tooltip {
     position: relative;
     display: inline-block;
-    margin: 3em 0 0 -2.2em;
+    margin: 2em 0 0 -3em;
     padding: 0.5em 1em;
     border: solid rgb(230, 71, 89) 1px;
     border-radius: 5px;
@@ -60,6 +66,12 @@
     font: 1.2em Xiomara, sans-serif;
     white-space: pre;
     color: white;
+    opacity: 0;
+    transition: 5s;
+}
+
+.home-page .menu-select-tooltip.active {
+    opacity: 1;
 }
 
 .home-page .menu-select-tooltip:after {

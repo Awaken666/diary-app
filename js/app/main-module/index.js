@@ -9,7 +9,7 @@ main
     .component('view', require('./view-component/view-component'))
     .component('modal', require('./modal-window-component/modal-window-component'));
 
-main.config(function($stateProvider) {
+main.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/home',
@@ -39,6 +39,8 @@ main.config(function($stateProvider) {
             url: '/save',
             template: '<save-menu day-times-data="$ctrl.viewData.dayTimes" result="$ctrl.viewData.resultFinal"></save-menu>'
         });
+
+    $urlRouterProvider.otherwise('home');
 });
 
 main.run(function($rootScope, activeClassService, $state, $stateParams) {

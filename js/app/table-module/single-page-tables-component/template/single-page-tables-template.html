@@ -1,7 +1,7 @@
 <div class="tables-list">
     <div class="title">Таблицы</div>
     <div class="list">
-        <div ng-repeat="obj in $ctrl.foodsObjs" ng-click="$ctrl.showTable(obj.$$hashKey)" ng-class="{'active-table-title': $ctrl.$$hashKey === obj.$$hashKey}">
+        <div ng-repeat="obj in $ctrl.foodsObjs" ng-click="$ctrl.showTable(obj.$$hashKey, obj)" ng-class="{'active-table-title': $ctrl.$$hashKey === obj.$$hashKey}">
             - {{obj.title}}
         </div>
         <div ng-if="$ctrl.showMyFoodTitle()" ng-click="$ctrl.showTable('add-food')" ng-class="{'active-table-title': $ctrl.$$hashKey === 'add-food'}">- Добавленные продукты</div>

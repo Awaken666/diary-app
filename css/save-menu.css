@@ -12,6 +12,7 @@ save-menu .button {
     border-radius: 6px;
     font: 1.2em Xiomara, sans-serif;
     cursor: pointer;
+    transition: 0.1s;
 }
 
 save-menu .save-button,

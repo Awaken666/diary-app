@@ -31,6 +31,7 @@ module.exports = function(dataService, modal) {
         }
         if (values[0] === 0) {
             modal.open({title: 'Ошибка', message: 'Порция не может быть равна нулю'}, 'alert');
+            success = false;
             return;
         }
         values.forEach((value) => {

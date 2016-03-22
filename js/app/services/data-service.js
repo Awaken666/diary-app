@@ -97,12 +97,7 @@ module.exports = function($http, $window) {
             })
     }
 
-    if ($window.localStorage.saveData && !confirm('Загрузить сохранения?')) {
-        if (confirm('Удалить имеющиеся сохранения?')) {
-            $window.localStorage.removeItem('saveData');
-            $window.localStorage.removeItem('savedLimits');
-        }
-    }
+
 
     return {
         base: base,

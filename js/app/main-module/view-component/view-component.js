@@ -3,7 +3,7 @@
 const viewTemplate = require('./template/view-template.html');
 
 const view = {
-    controller: function (dataService, limitsService, $window, $stateParams, $state, $timeout) {
+    controller: function (dataService, limitsService, $window, modal, dietChoose) {
         const empty = {
             empty: true,
             name: '---------',
@@ -17,31 +17,22 @@ const view = {
         this.base = dataService.base;
         this.viewData = {
             limitsData: limitsService.limitsData,
-            tablesData: {}
+            tablesData: {},
+            resultFinal: {
+                carbohyd: {name: 'Угдеводы', value: 0},
+                prot: {name: 'Протеины', value: 0},
+                fat: {name: 'Жиры', value: 0},
+                kall: {name: 'Калории', value: 0}
+            }
         };
 
         dataService.getTableData()
             .then((data) => {
                 this.viewData.tablesData.foodsObjs = data;
             });
+        dataService.getDayTimesData()
+            .then((data) => this.viewData.dayTimes = data.data);
 
-
-
-        if ($window.localStorage.saveData) {
-            let data = JSON.parse($window.localStorage.saveData);
-            this.viewData.dayTimes = data.daysData;
-            this.viewData.resultFinal = data.resultFinal;
-        } else {
-            dataService.getDayTimesData()
-                .then((data) => this.viewData.dayTimes = data.data);
-
-            this.viewData.resultFinal = {
-                carbohyd: {name: 'Угдеводы', value: 0},
-                prot: {name: 'Протеины', value: 0},
-                fat: {name: 'Жиры', value: 0},
-                kall: {name: 'Калории', value: 0}
-            }
-        }
 
 
         this.compare = function (key) {
@@ -86,7 +77,7 @@ const view = {
             }
         };
 
-        this.removeMyFood = function(name) {
+        this.removeMyFood = function (name) {
 
             delete this.viewData.tablesData.myFoods[name];
             $window.localStorage.myFoods = JSON.stringify(this.viewData.tablesData.myFoods);
@@ -94,7 +85,7 @@ const view = {
             dataService.removeFromBase(name);
         };
 
-        this.addMyFood = function(name, values) {
+        this.addMyFood = function (name, values) {
             debugger;
             if (!this.viewData.tablesData.myFoods) this.viewData.tablesData.myFoods = {};
             if (this.viewData.tablesData.myFoods[name]) {
@@ -110,6 +101,26 @@ const view = {
         //LS
 
         if ($window.localStorage.myFoods) this.viewData.tablesData.myFoods = JSON.parse($window.localStorage.myFoods);
+
+
+
+        if ($window.localStorage.saveData) {
+            modal.open({title: 'Загрузка', message: 'Загрузить сохраненные данные?'}, 'confirm')
+                .then(() => {
+                    let data = JSON.parse($window.localStorage.saveData);
+                    this.viewData.dayTimes = data.daysData;
+                    this.viewData.resultFinal = data.resultFinal;
+
+                    dietChoose.loadLimits()
+                }, () => {
+                    modal.open({title: 'Загрузка', message: 'Удалить сохраненные данные?'}, 'confirm')
+                        .then(() => {
+                            $window.localStorage.removeItem('saveData');
+                            $window.localStorage.removeItem('savedLimits');
+                        });
+                });
+
+        }
 
 
 

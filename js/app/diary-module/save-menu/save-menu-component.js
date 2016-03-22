@@ -94,7 +94,19 @@ const saveMenu = {
                     }
                     modal.open({title: 'Сохранение данных', message: 'Данные успешно сохранены'}, 'alert');
                 });
+        };
 
+        this.removeData = function() {
+            if($window.localStorage.saveData) {
+                modal.open({title: 'Удаление', message: 'Удалить сохраненные данные?'}, 'confirm')
+                    .then(() => {
+                        $window.localStorage.removeItem('saveData');
+                        $window.localStorage.removeItem('savedLimits');
+                        modal.open({title: 'Удаление', message: 'Данные успешно удалены'}, 'alert');
+                    });
+            } else {
+                modal.open({title: 'Ошибка', message: 'Нет сохраненных данных'}, 'alert');
+            }
         }
     },
     template: saveMenuTemplate

@@ -50,11 +50,14 @@ module.exports = function($timeout, validationService, limitsService, $window, m
             });
     }
 
-    if ($window.localStorage.savedLimits) {
-        let data = JSON.parse($window.localStorage.savedLimits);
-        setDiet(data.diet);
-        setClassName(data.phaseId)
+    function loadLimits() {
+        if ($window.localStorage.savedLimits) {
+            let data = JSON.parse($window.localStorage.savedLimits);
+            setDiet(data.diet);
+            setClassName(data.phaseId)
+        }
     }
+
 
     return {
         diets: diets,
@@ -62,6 +65,7 @@ module.exports = function($timeout, validationService, limitsService, $window, m
         setDiet: setDiet,
         setClassName: setClassName,
         setLimits: setLimits,
-        resetChoose: resetChoose
+        resetChoose: resetChoose,
+        loadLimits: loadLimits
     }
 };

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Hangyaboly";
-    src: url(./hangyaboly.ttf)   format("truetype");
+    src: url(hangyaboly.ttf)   format("truetype");
 }
 
 modal .modal-background {

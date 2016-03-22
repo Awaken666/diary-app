@@ -25,7 +25,7 @@ const view = {
                 this.viewData.tablesData.foodsObjs = data;
             });
 
-        if ($window.localStorage.myFoods) this.viewData.tablesData.myFoods = JSON.parse($window.localStorage.myFoods);
+
 
         if ($window.localStorage.saveData) {
             let data = JSON.parse($window.localStorage.saveData);
@@ -95,6 +95,8 @@ const view = {
         };
 
         this.addMyFood = function(name, values) {
+            debugger;
+            if (!this.viewData.tablesData.myFoods) this.viewData.tablesData.myFoods = {};
             if (this.viewData.tablesData.myFoods[name]) {
                 if (!confirm('Перезаписать существующий продукт?')) return;
                 dataService.removeFromBase(name);
@@ -103,7 +105,13 @@ const view = {
             $window.localStorage.myFoods = JSON.stringify(this.viewData.tablesData.myFoods);
 
             dataService.addToBase(name, values);
-        }
+        };
+
+        //LS
+
+        if ($window.localStorage.myFoods) this.viewData.tablesData.myFoods = JSON.parse($window.localStorage.myFoods);
+
+
 
     },
     template: viewTemplate

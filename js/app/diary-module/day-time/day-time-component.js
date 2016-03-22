@@ -29,7 +29,6 @@ const dayTime = {
         };
 
         this.removeFood = function(food) {
-            debugger;
             this.remove({dayTimeId: this.index, food: food})
         };
 

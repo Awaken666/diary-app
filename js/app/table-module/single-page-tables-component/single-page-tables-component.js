@@ -20,6 +20,7 @@ const tables = {
         };
 
         this.showMyFoodTitle = function() {
+            if (!this.myFoods) return false;
             return !!Object.keys(this.myFoods).length
         }
     },

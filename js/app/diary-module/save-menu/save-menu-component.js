@@ -17,7 +17,7 @@ const saveMenu = {
                     modal.open({title: 'Ошибка сохранения', message: 'Нет новых данных для сохранения'}, 'alert');
                     return;
                 }
-                modal.open({title: 'Подтвердите', message: 'Перезаписать данные печати текушего дня?'}, 'confirm')
+                return modal.open({title: 'Подтвердите', message: 'Перезаписать данные печати текушего дня?'}, 'confirm')
                     .then(() => {
                         data.pop();
 
@@ -70,11 +70,13 @@ const saveMenu = {
             } else {
                 data = JSON.parse(data);
                 if (data[data.length - 1].saveTimeId !== $window.localStorage._lastSaveId) {
-                    modal.open({title: 'Сохранение', message: 'Сохранить данные для просмотра?'}, 'confirm')
+                    modal.open({title: 'Сохранение', message: 'Сохранить текущие данные для просмотра?'}, 'confirm')
                         .then(() => {
-                            this.saveForPrint();
-                            $window.open('./print.html');
+                            this.saveForPrint().then(() => $window.open('./print.html'), () => $window.open('./print.html'));
+
                         }, () => $window.open('./print.html'));
+                } else {
+                    $window.open('./print.html');
                 }
             }
 
@@ -85,7 +87,11 @@ const saveMenu = {
             modal.open({title: 'Сохранение', message: 'Сохранить текущие данные?'}, 'confirm')
                 .then(() => {
                     $window.localStorage.saveData = JSON.stringify({daysData: this.dayTimesData, resultFinal: this.result});
-                    $window.localStorage.savedLimits = $window.sessionStorage.savedLimits;
+                    if ($window.sessionStorage.savedLimits) {
+                        $window.localStorage.savedLimits = $window.sessionStorage.savedLimits;
+                    } else if (!$window.sessionStorage.savedLimits && $window.localStorage.savedLimits) {
+                        $window.localStorage.removeItem('savedLimits');
+                    }
                     modal.open({title: 'Сохранение данных', message: 'Данные успешно сохранены'}, 'alert');
                 });
 

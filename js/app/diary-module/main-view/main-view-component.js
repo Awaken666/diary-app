@@ -28,10 +28,10 @@ const mainView = {
                 .then((data) => this.viewData.dayTimes = data.data);
 
             this.viewData.resultFinal = {
-                carbohyd: 0,
-                prot: 0,
-                fat: 0,
-                kall: 0
+                carbohyd: {name: 'Угдеводы', value: 0},
+                prot: {name: 'Протеины', value: 0},
+                fat: {name: 'Жиры', value: 0},
+                kall: {name: 'Калории', value: 0}
             }
         }
 
@@ -72,15 +72,16 @@ const mainView = {
             if (bool) {
                 for (let key in result) {
                     result[key] += food[key];
-                    this.viewData.resultFinal[key] += food[key];
+                    this.viewData.resultFinal[key].value += food[key];
                 }
             } else {
                 for (let key in result) {
                     result[key] -= food[key];
-                    this.viewData.resultFinal[key] -= food[key];
+                    this.viewData.resultFinal[key].value -= food[key];
                 }
             }
-        }
+        };
+
     },
     template: mainViewTemplate
 };

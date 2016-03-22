@@ -23,10 +23,10 @@
             <div class="result-final">
                 <span class="name"></span>
                 <span class="portion">---</span>
-                <span class="carbohyd" ng-class="{'active-limit': $ctrl.compare('carbohyd')}">{{ $ctrl.viewData.resultFinal.carbohyd }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].carbohyd + ')' | limit }}</span>
-                <span class="prot" ng-class="{'active-limit': $ctrl.compare('prot')}">{{ $ctrl.viewData.resultFinal.prot  }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].prot + ')' | limit }}</span>
-                <span class="fat" ng-class="{'active-limit': $ctrl.compare('fat')}">{{ $ctrl.viewData.resultFinal.fat }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].fat + ')' | limit }}</span>
-                <span class="kall" ng-class="{'active-limit': $ctrl.compare('kall')}">{{ $ctrl.viewData.resultFinal.kall }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].kall + ')' | limit }}</span>
+                <span class="carbohyd" ng-class="{'active-limit': $ctrl.compare('carbohyd')}">{{ $ctrl.viewData.resultFinal.carbohyd.value }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].carbohyd + ')' | limit }}</span>
+                <span class="prot" ng-class="{'active-limit': $ctrl.compare('prot')}">{{ $ctrl.viewData.resultFinal.prot.value  }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].prot + ')' | limit }}</span>
+                <span class="fat" ng-class="{'active-limit': $ctrl.compare('fat')}">{{ $ctrl.viewData.resultFinal.fat.value }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].fat + ')' | limit }}</span>
+                <span class="kall" ng-class="{'active-limit': $ctrl.compare('kall')}">{{ $ctrl.viewData.resultFinal.kall.value }} {{'(' + $ctrl.viewData.limitsData.limits["Итог"].kall + ')' | limit }}</span>
             </div>
 
         </section>

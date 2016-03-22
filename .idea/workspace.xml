@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d2bd2d9-7900-4699-8ac7-c313b3a0880a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/add-food-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/add-food-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/add-food-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/back-icon1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/back-icon2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/back-icon3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/fonts/hangyaboly.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/home-icon-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/home-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/home-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/print-icon-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/print-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/print-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/remove-img-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/remove-img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/result-icon-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/result-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/result-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/save-icon-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/save-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/save-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/settings-icon-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/settings-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/settings-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/tables-icon-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/tables-icon-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/images/icons/tables-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/css/fonts/xiomara.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/print.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/second-version/styles.js" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\day-time.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\food.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\main-view.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\master.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\reset.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\save-menu.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\css\table-view.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\fonts\2.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\fonts\5.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\arrow-left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\arrow-right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\arrow-toggle-down-active.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\arrow-toggle-down.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\arrow-toggle-up-active.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\arrow-toggle-up.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\delete.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\header-background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\menu-br.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\pointer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\table-border.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\carbohyd-underline.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\fat-underline.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\food-name-underline.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\kall-underline.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\portion-underline.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\img\underlines\prot-underline.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\day-time\day-time-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\day-time\template\day-time-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\day-time\tests\tests.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\food\food-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\food\template\food-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\food\tests\tests.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\main-view\main-view-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\main-view\template\main-view.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\main-view\tests\tests.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\menu\menu-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\menu\template\menu-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\menu\tests\tests.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\save-menu\save-menu-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\save-menu\template\save-menu-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\services\calculation-service.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\services\data-service.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\services\limits-filter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\services\limits-service.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\services\tests\tests.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\services\validation-service.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\add-to-table-component\add-to-table-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\add-to-table-component\template\add-to-table-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\storage-table-component\storage-table-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\storage-table-component\template\storage-table-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\table-component\table-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\table-component\template\table-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\table-view-component\table-view-component.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\table-view-component\template\table-view-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\js\diaryApp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\styles.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\webpack.config.js" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\day-times-data.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/day-times-data.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\food.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/food.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\limits-data\carbohydrates-phase1.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/limits-data/carbohydrates-phase1.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\limits-data\carbohydrates-phase2.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/limits-data/carbohydrates-phase2.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\limits-data\carbohydrates-phase3.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/limits-data/carbohydrates-phase3.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\limits-data\proteins-phase1.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/limits-data/proteins-phase1.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\limits-data\proteins-phase2.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/limits-data/proteins-phase2.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\JSONdata\limits-data\proteins-phase3.json" afterPath="$PROJECT_DIR$/second-version/JSONdata/limits-data/proteins-phase3.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\fonts\4.ttf" afterPath="$PROJECT_DIR$/second-version/css/fonts/angry-birds.ttf" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\day-times-data.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/day-times-data.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\food.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/food.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\limits-data\carbohydrates-phase1.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/limits-data/carbohydrates-phase1.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\limits-data\carbohydrates-phase2.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/limits-data/carbohydrates-phase2.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\limits-data\carbohydrates-phase3.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/limits-data/carbohydrates-phase3.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\limits-data\proteins-phase1.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/limits-data/proteins-phase1.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\limits-data\proteins-phase2.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/limits-data/proteins-phase2.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\JSONdata\limits-data\proteins-phase3.json" afterPath="$PROJECT_DIR$/first-version/JSONdata/limits-data/proteins-phase3.json" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\bundle.js" afterPath="$PROJECT_DIR$/first-version/bundle.js" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\fonts\2.ttf" afterPath="$PROJECT_DIR$/first-version/fonts/2.ttf" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\fonts\4.ttf" afterPath="$PROJECT_DIR$/first-version/fonts/4.ttf" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\fonts\5.ttf" afterPath="$PROJECT_DIR$/first-version/fonts/5.ttf" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\arrow-left.png" afterPath="$PROJECT_DIR$/first-version/img/arrow-left.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\arrow-right.png" afterPath="$PROJECT_DIR$/first-version/img/arrow-right.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\arrow-toggle-down-active.png" afterPath="$PROJECT_DIR$/first-version/img/arrow-toggle-down-active.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\arrow-toggle-down.png" afterPath="$PROJECT_DIR$/first-version/img/arrow-toggle-down.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\arrow-toggle-up-active.png" afterPath="$PROJECT_DIR$/first-version/img/arrow-toggle-up-active.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\arrow-toggle-up.png" afterPath="$PROJECT_DIR$/first-version/img/arrow-toggle-up.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\delete.png" afterPath="$PROJECT_DIR$/first-version/img/delete.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\header-background.png" afterPath="$PROJECT_DIR$/first-version/img/header-background.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\menu-br.png" afterPath="$PROJECT_DIR$/first-version/img/menu-br.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\pointer.png" afterPath="$PROJECT_DIR$/first-version/img/pointer.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\table-border.png" afterPath="$PROJECT_DIR$/first-version/img/table-border.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\underlines\carbohyd-underline.png" afterPath="$PROJECT_DIR$/first-version/img/underlines/carbohyd-underline.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\underlines\fat-underline.png" afterPath="$PROJECT_DIR$/first-version/img/underlines/fat-underline.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\underlines\food-name-underline.png" afterPath="$PROJECT_DIR$/first-version/img/underlines/food-name-underline.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\underlines\kall-underline.png" afterPath="$PROJECT_DIR$/first-version/img/underlines/kall-underline.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\underlines\portion-underline.png" afterPath="$PROJECT_DIR$/first-version/img/underlines/portion-underline.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\img\underlines\prot-underline.png" afterPath="$PROJECT_DIR$/first-version/img/underlines/prot-underline.png" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\index.html" afterPath="$PROJECT_DIR$/first-version/index.html" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\print.html" afterPath="$PROJECT_DIR$/first-version/print.html" />
+      <change type="MOVED" beforePath="C:\Users\Владимир\WebstormProjects\food-diary\public\styles.css" afterPath="$PROJECT_DIR$/first-version/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    </list>
+    <ignored path="food-diary.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="food-diary" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/first-version/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.21326165">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Html5" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="614373e3e280be68b2a1ebdc50136b27458c14f4" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/app/diary-module/food/template/food-template.html" />
+        <option value="$PROJECT_DIR$/css/day-time.css" />
+        <option value="$PROJECT_DIR$/css/result.css" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/result-component/result-component.js" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/result-component/template/result-template.html" />
+        <option value="$PROJECT_DIR$/js/app/main-module/modal-window-component/templ.html" />
+        <option value="$PROJECT_DIR$/js/app/main-module/modal-window-component/templ2.html" />
+        <option value="$PROJECT_DIR$/js/app/table-module/table-component/table-component.js" />
+        <option value="$PROJECT_DIR$/js/app/table-module/table-view-component/template/table-view-template.html" />
+        <option value="$PROJECT_DIR$/js/app/table-module/table-view-component/table-view-component.js" />
+        <option value="$PROJECT_DIR$/js/app/table-module/storage-table-component/template/storage-table-template.html" />
+        <option value="$PROJECT_DIR$/js/app/table-module/add-to-table-component/template/add-to-table-template.html" />
+        <option value="$PROJECT_DIR$/css/add-food.css" />
+        <option value="$PROJECT_DIR$/css/menu.css" />
+        <option value="$PROJECT_DIR$/js/app/index.js" />
+        <option value="$PROJECT_DIR$/js/app/main-module/view-component/template/view-template.html" />
+        <option value="$PROJECT_DIR$/js/app/services/modal-service.js" />
+        <option value="$PROJECT_DIR$/js/app/main-module/modal-window-component/modal-window-component.js" />
+        <option value="$PROJECT_DIR$/js/app/main-module/modal-window-component/template/modal-template.html" />
+        <option value="$PROJECT_DIR$/css/modal-window.css" />
+        <option value="$PROJECT_DIR$/js/app/main-module/left-side-menu-component/left-side-menu-component.js" />
+        <option value="$PROJECT_DIR$/css/index.js" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/day-time/day-time-component.js" />
+        <option value="$PROJECT_DIR$/js/app/table-module/storage-table-component/storage-table-component.js" />
+        <option value="$PROJECT_DIR$/js/app/services/diet-choose-service.js" />
+        <option value="$PROJECT_DIR$/js/app/main-module/view-component/view-component.js" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/save-menu/save-menu-component.js" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/save-menu/template/save-menu-template.html" />
+        <option value="$PROJECT_DIR$/js/app/main-module/home-page-module/home-page-component.js" />
+        <option value="$PROJECT_DIR$/js/app/main-module/index.js" />
+        <option value="$PROJECT_DIR$/css/home.css" />
+        <option value="$PROJECT_DIR$/js/app/main-module/home-page-module/template/home-page-template.html" />
+        <option value="$PROJECT_DIR$/js/app/table-module/single-page-tables-component/template/single-page-tables-template.html" />
+        <option value="$PROJECT_DIR$/js/app/table-module/single-page-tables-component/single-page-tables-component.js" />
+        <option value="$PROJECT_DIR$/css/tables.css" />
+        <option value="$PROJECT_DIR$/css/save-menu.css" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/index.js" />
+        <option value="$PROJECT_DIR$/js/app/table-module/index.js" />
+        <option value="$PROJECT_DIR$/public/print.html" />
+        <option value="$PROJECT_DIR$/js/app/services/data-service.js" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/main-view/main-view-component.js" />
+        <option value="$PROJECT_DIR$/js/app/diary-module/menu/menu-component.js" />
+        <option value="$PROJECT_DIR$/css/master.css" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/js/app/services/validation-service.js" />
+        <option value="$PROJECT_DIR$/css/left-side-menu.css" />
+        <option value="$PROJECT_DIR$/js/app/main-module/left-side-menu-component/template/left-side-menu-template.html" />
+        <option value="$PROJECT_DIR$/js/app/table-module/add-to-table-component/add-to-table-component.js" />
+        <option value="$PROJECT_DIR$/first-version/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/second-version/bundle.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="second-version" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food-diary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first-version" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="JavaScriptLanguageLevel" value="ES6" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="settings.editor.splitter.proportion" value="0.21645446" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mailer" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Владимир/WebstormProjects/food-diary/js/app/services/calculation-service.js" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\second-version" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\css\images" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\public" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\css\fonts" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\css\images\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\first-version" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\js\app\table-module\storage-table-component" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\public" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\js\app\diary-module\day-time\template" />
+      <recent name="C:\Users\Владимир\WebstormProjects\food-diary\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d2bd2d9-7900-4699-8ac7-c313b3a0880a" name="Default" comment="" />
+      <created>1456761593574</created>
+      <option name="number" value="Default" />
+      <updated>1456761593574</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2544643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22875817" sideWeight="0.50595236" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7663399" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22875817" sideWeight="0.4940476" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/first-version/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first-version/print.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20334928">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/second-version/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23584905">
+          <caret line="930" column="41" selection-start-line="930" selection-start-column="41" selection-end-line="930" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first-version/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21326165">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

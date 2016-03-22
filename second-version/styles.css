@@ -1,0 +1,981 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}@font-face {
+    font-family: "Angry-Birds";
+    src: url(css/fonts/angry-birds.ttf)   format("truetype");
+}
+
+@font-face {
+    font-family: "Xiomara";
+    src: url(css/fonts/xiomara.ttf)   format("truetype");
+}
+
+@font-face {
+    font-family: "Hangyaboly";
+    src: url(css/fonts/hangyaboly.ttf)   format("truetype");
+}
+
+html {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    min-width: 890px;
+    background: rgb(37, 40, 48);
+    overflow-x: auto;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-view {
+    position: relative;
+    margin: 3em 6em 0 13em;
+}.left-side-menu {
+    position: fixed;
+    width: 4.3em;
+    height: 100%;
+    margin-right: 7em;
+    background: rgb(48, 52, 62);
+    overflow-x: visible;
+    z-index: 99;
+}
+
+
+
+left-side-menu .to-another-design {
+    position: relative;
+    width: 4.3em;
+    height: 4.5em;
+    background-size: 4.5em 9em;
+    cursor: pointer;
+}
+
+left-side-menu .to-another-design.icon1 {background: rgb(15, 16,19) url(css/images/icons/back-icon1.png) no-repeat center 0; background-size: 4.5em 9em;}
+left-side-menu .to-another-design.icon2 {background: rgb(15, 16,19) url(css/images/icons/back-icon2.png) no-repeat center 0; background-size: 4.5em 9em;}
+left-side-menu .to-another-design.icon3 {background: rgb(15, 16,19) url(css/images/icons/back-icon3.png) no-repeat center 0; background-size: 4.5em 9em;}
+
+left-side-menu .to-another-design:hover {
+    background-position: center -4.5em;
+}
+
+
+
+left-side-menu .menu-item {
+    position: relative;
+    width: 4.3em;
+    height: 3.5em;
+    border-bottom: 1px solid rgb(37, 40, 48);
+    cursor: pointer;
+    overflow: visible;
+}
+
+left-side-menu .menu-item.print {background: url(css/images/icons/print-icon.png) no-repeat center; background-size: 2.7em ;}
+left-side-menu .menu-item.print:hover {background: rgb(67, 72, 87) url(css/images/icons/print-icon-hover.png) no-repeat center; background-size: 2.7em;}
+left-side-menu .menu-item.print.active-print {background: rgb(37, 40, 48) url(css/images/icons/print-icon-active.png) no-repeat center; background-size: 2.7em ;}
+
+left-side-menu .menu-item.settings {background: url(css/images/icons/settings-icon.png) no-repeat center; background-size: 2em;}
+left-side-menu .menu-item.settings:hover {background: rgb(67, 72, 87) url(css/images/icons/settings-icon-hover.png) no-repeat center; background-size: 2em ;}
+left-side-menu .menu-item.settings.active-settings {background: rgb(37, 40, 48) url(css/images/icons/settings-icon-active.png) no-repeat center; background-size: 2em ;}
+
+left-side-menu .menu-item.result {background: url(css/images/icons/result-icon.png) no-repeat center; background-size: 2em;}
+left-side-menu .menu-item.result:hover {background: rgb(67, 72, 87) url(css/images/icons/result-icon-hover.png) no-repeat center; background-size: 2em ;}
+left-side-menu .menu-item.result.active-result {background: rgb(37, 40, 48) url(css/images/icons/result-icon-active.png) no-repeat center; background-size: 2em;}
+
+left-side-menu .menu-item.add-food {background: url(css/images/icons/add-food-icon.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.add-food:hover {background: rgb(67, 72, 87) url(css/images/icons/add-food-icon-hover.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.add-food.active-add-food {background: rgb(37, 40, 48) url(css/images/icons/add-food-active.png) no-repeat center; background-size: 1.8em ;}
+
+left-side-menu .menu-item.save {background: url(css/images/icons/save-icon.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.save:hover {background: rgb(67, 72, 87) url(css/images/icons/save-icon-hover.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.save.active-save {background: rgb(37, 40, 48) url(css/images/icons/save-icon-active.png) no-repeat center; background-size: 1.8em ;}
+
+left-side-menu .menu-item.tables {background: url(css/images/icons/tables-icon.png) no-repeat center; background-size: 1.9em;}
+left-side-menu .menu-item.tables:hover {background: rgb(67, 72, 87) url(css/images/icons/tables-icon-hover.png) no-repeat center; background-size: 1.9em;}
+left-side-menu .menu-item.tables.active-tables {background: rgb(37, 40, 48) url(css/images/icons/tables-icon-active.png) no-repeat center; background-size: 1.9em ;}
+
+left-side-menu .menu-item.home {background: url(css/images/icons/home-icon.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.home:hover {background: rgb(67, 72, 87) url(css/images/icons/home-icon-hover.png) no-repeat center; background-size: 1.8em;}
+left-side-menu .menu-item.home.active-home {background: rgb(37, 40, 48) url(css/images/icons/home-icon-active.png) no-repeat center; background-size: 1.8em ;}
+
+
+left-side-menu .tooltip {
+    position: absolute;
+    left: 115%;
+    top: 1.3em;
+    padding: 0.4em 0.7em;
+    line-height: 1.5em;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    font: 0.73em Helvetica, Arial, sans-serif;
+    color: rgb(37, 40, 48);
+    white-space: nowrap;
+    transition: 0.2s;
+    z-index: 9999;
+}
+
+left-side-menu .tooltip:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-right-color: rgba(255, 255, 255, 0.9);
+    color: rgb(37, 40, 48);
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+}
+left-side-menu .tooltip.ng-leave.ng-leave-active,
+left-side-menu .tooltip.ng-enter {opacity: 0;}
+
+left-side-menu .tooltip.ng-leave,
+left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}
+
+#go {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}.daytime-choose {
+    position: relative;
+    height: 4.5em;
+    margin: 0 6em 0 13em;
+    border-bottom: solid rgb(67, 72, 87) 2px;
+
+}
+
+.daytime {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.75em;
+    margin-right: 2.6em;
+    padding: 0 0.2em 1em;
+    font-size: 1.2em;
+    font-family: Angry-Birds, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(193, 196, 203);
+    cursor: pointer;
+}
+
+.daytime:hover {
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: solid rgb(202, 22, 41) 2px;
+}
+
+.active-breakfast.breakfast,
+.active-first-snack.first-snack,
+.active-dinner.dinner,
+.active-second-snack.second-snack,
+.active-evening-meal.evening-meal,
+.active-breakfast.breakfast:hover,
+.active-first-snack.first-snack:hover,
+.active-dinner.dinner:hover,
+.active-second-snack.second-snack:hover,
+.active-evening-meal.evening-meal:hover {
+    color: rgba(202, 22, 41, 0.9);
+    border-bottom: solid rgba(202, 22, 41, 0.9) 2px;
+}
+.active-breakfast.breakfast:after,
+.active-first-snack.first-snack:after,
+.active-dinner.dinner:after,
+.active-second-snack.second-snack:after,
+.active-evening-meal.evening-meal:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-bottom-color: rgb(202, 22, 41);
+    color: rgb(37, 40, 48);
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;
+}.home-page .left-line, .right-line {
+    width: 33%;
+    padding: 1.1em 0;
+    border-bottom: solid rgb(228, 216, 54) 1px;
+}
+
+.home-page .left-line {
+    float: left;
+    margin: 0 2%  0 4%;
+}
+
+.home-page .right-line {
+    float: right;
+    margin: 0 4%  0 2%;
+}
+
+.home-page h2 {
+    margin-top: 3em;
+    font-family: Angry-Birds, Verdana, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: rgb(193, 196, 203);
+}
+
+.home-page .daytime-select-tooltip {
+    position: relative;
+    display: inline-block;
+    margin: -1.5em 0 0 10em;
+    padding: 0.5em 1em;
+    border: solid rgb(27, 201, 142) 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(27, 201, 142, 0.6);
+    background: rgba(27, 201, 142, 0.9);
+    font: 1.2em Xiomara, sans-serif;
+    white-space: pre;
+    color: white;
+    opacity: 0;
+    transition: 7s;
+}
+
+.home-page .daytime-select-tooltip.active {
+    opacity: 1;
+}
+
+.home-page .daytime-select-tooltip:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-bottom-color: rgb(27, 201, 142);
+    color: rgba(37, 40, 48, 0);
+    bottom: 101%;
+    right: 88%;
+}
+
+.home-page .menu-select-tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 2em 0 0 -3em;
+    padding: 0.5em 1em;
+    border: solid rgb(230, 71, 89) 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(230, 71, 89, 0.6);
+    background: rgba(230, 71, 89, 0.9);
+    font: 1.2em Xiomara, sans-serif;
+    white-space: pre;
+    color: white;
+    opacity: 0;
+    transition: 5s;
+}
+
+.home-page .menu-select-tooltip.active {
+    opacity: 1;
+}
+
+.home-page .menu-select-tooltip:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-right-color: rgb(230, 71, 89);
+    color: rgba(37, 40, 48, 0);
+    bottom: 75%;
+    right: 100.1%;
+}
+.day-time .input form {
+    font: 1.6em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+.day-time .input angucomplete-alt {
+    display: inline-block;
+}
+
+.day-time .input input {
+    margin-left: 2.3em;
+    padding-left: 0.2em;
+    vertical-align: middle;
+    line-height: 1.5em;
+    background-color: rgb(67, 72, 87);
+    border: none;
+    border-radius: 5px;
+}
+.day-time .input input:focus {
+    outline: none;
+    background-color: rgb(200, 203, 213);
+}
+.day-time .input angucomplete-alt input {
+    width: 20em;
+}
+.day-time .input input.portion-input {
+    margin-left: 5em;
+}
+
+.day-time .input .angucomplete-dropdown {
+    position: absolute;
+    max-height: 12em;
+    width: 15.05em;
+    margin-left: 1.7em;
+    overflow-y: auto;
+    z-index: 9999;
+    background: rgb(200, 203, 213);
+    font: 0.7em Angry-Birds, sans-serif;
+    color: black;
+}
+
+.day-time .input .add-button {
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    margin: 0.15em 0 0 6em;
+    padding: 0.05em;
+    vertical-align: top;
+    text-align: center;
+    border: solid 3px;
+    border-radius:30px;
+    box-shadow: 0 0 10px 0 rgba(159, 134, 255, 0.6);
+    font: 4em Angry-Birds, sans-serif;
+    color: rgba(159, 134, 255, 0.6);
+    line-height: 0.45em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.day-time .input .add-button:hover {
+    color: rgba(228, 216, 54, 1);
+}
+
+
+.day-time .table {
+    margin-top: 1.5em;
+    width: 95%;
+}
+
+.day-time .table .table-tittle {
+    position: relative;
+    border-top: solid 1px rgb(159, 134, 255);
+    border-bottom: solid 1px rgb(159, 134, 255);
+    padding: 10px 0 10px;
+    font: 1.1em Angry-Birds, sans-serif;
+    color: rgba(193, 196, 203, 0.7);
+}
+
+.day-time .table .table-tittle span {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.day-time .table .table-tittle span.name {
+    width: 22%;
+}
+.day-time .table .summary {
+    position: relative;
+    border-top: solid 1px rgb(159, 134, 255);
+    padding: 10px 0 10px;
+    font: 1.1em Angry-Birds, sans-serif;
+    color: rgba(193, 196, 203, 0.7);
+}
+
+.day-time .table .summary span {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.day-time .table .summary span.name {
+    width: 20%;
+    padding-left: 0.6em;
+    text-align: center;
+}
+
+.day-time .table .summary .active-limit {
+    background: rgba(230, 71, 89, 0.7);
+}
+
+food .food {
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+}
+
+food .food span {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    vertical-align: middle;
+    color:  rgb(193, 196, 203);
+}
+
+food .food span.name {
+    width: 19%;
+    padding: 0 0 0 19px;
+    text-align: center;
+}
+
+food .food .remove-food {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background: url(css/images/remove-img.png) no-repeat center;
+    background-size: 25px 25px;
+    cursor: pointer;
+}
+
+food .food .remove-food:hover {
+    background: url(css/images/remove-img-hover.png) no-repeat center;
+    background-size: 25px 25px;
+}
+
+food .food .remove-food:hover {
+
+}
+
+food .food.empty .remove-food {
+    display: none;
+}
+
+
+menu .diet-menu {
+    margin-bottom: 2em;
+}
+
+menu .diet-menu .diet-tittle,
+menu .phase-menu .phase-tittle {
+    font: 1.6em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+menu .diet-menu .diet-choose {
+    margin: 1em auto;
+    font: 1.4em Xiomara, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+menu .diet-menu .diet {
+    margin-left: 4em;
+    cursor: pointer;
+    transition: text-shadow 0.3s;
+}
+
+menu .diet-menu .diet:hover {
+    color: rgb(230, 71, 89);
+    text-shadow: 6px -2px 10px rgb(230, 71, 89);
+}
+
+menu .diet-menu .diet.active {
+    color: rgb(230, 71, 89);
+    border-bottom: solid 1px rgb(230, 71, 89);
+    text-shadow: 4px -2px 10px rgb(230, 71, 89);
+}
+
+menu .diet-menu .diet.active-add-active {
+    text-shadow: 4px -2px 2px rgb(230, 71, 89);
+}
+
+menu .diet-menu br {
+
+}
+
+menu .phase-menu .phase-choose {
+    margin-top: 1.7em;
+}
+
+menu .phase-menu .phase-choose div {
+    display: inline;
+    margin-left: 2.1em;
+    text-decoration: none;
+    font: 3em Xiomara, sans-serif;
+    color: rgba(193, 196, 203, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+menu .phase-menu .phase-choose div:hover {
+    color: rgb(193, 196, 203);
+    text-shadow: 0 0 10px rgba(193, 196, 203, 0.7);
+}
+
+menu .phase-menu .phase-choose div.start {
+    color: rgb(193, 196, 203);
+}
+
+menu .phase-menu .phase-choose div.start:hover {
+    color: rgb(230, 71, 89);
+    text-shadow: none;
+}
+
+menu .phase-menu .phase-choose div.first-phase.active1,
+menu .phase-menu .phase-choose div.second-phase.active2,
+menu .phase-menu .phase-choose div.third-phase.active3 {
+    color: rgb(230, 71, 89);
+    text-shadow: 0 0 10px rgba(230, 71, 89, 0.7);
+}
+
+menu .clear-limits {
+    display: inline-block;
+    margin-top: 3em;
+    padding: 0.5em;
+    border: solid rgb(230, 71, 89) 1px;
+    border-radius: 6px;
+    color: rgb(230, 71, 89);
+    cursor: pointer;
+}
+
+menu .clear-limits:hover {
+    background: rgba(230, 71, 89, 0.7);
+    color: white;
+}result .result .result-title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+result .result .result-table {
+    display: inline-block;
+    width: 30%;
+    margin:3em 0 3em 6%;
+    border: solid rgb(67, 72, 87) 1px;
+    border-radius: 4px;
+}
+
+result .result .result-table .title {
+    padding: 0.6em;
+    border-bottom: solid rgb(67, 72, 87) 1px;
+    font: 1.2em Angry-Birds, sans-serif;
+    color: white;
+}
+
+result .result .result-table .value {
+    position: relative;
+    padding: 0.6em;
+    font: 1.2em Xiorama, sans-serif;
+    text-align: center;
+    color: rgb(193, 196, 203);
+}
+
+result .result .result-table .title span {
+    float: right;
+    font: 0.6em Xiorama, sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+result .result .result-table .value.limits {
+    text-align: left;
+}
+
+result .result .result-table .value.limits span {
+    float: right;
+    font: 0.8em Xiorama, sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+result .result .result-table .value.limits .graph {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}modal .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Hangyaboly, sans-serif;
+    color: rgb(120, 120, 120);
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 9999;
+    transition: 0.4s;
+}
+
+modal .modal-background .window {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    width: 35%;
+    margin-left: -18%;
+    border-radius: 7px;
+    background-color: white;
+    transition: 1s;
+}
+
+modal .modal-background.ng-leave.ng-leave-active,
+modal .modal-background.ng-enter {
+    top: -20em;
+    opacity: 0;
+}
+
+modal .modal-background.ng-enter.ng-enter-active,
+modal .modal-background.ng-leave {
+    top: 0;
+    opacity: 1;
+}
+
+modal .modal-background .window .title,
+modal .modal-background .window .message {
+    width: 100%;
+    height: 30%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+modal .modal-background .window .title {
+    font-size: 1.4em;
+    font-weight: bold;
+    border-bottom: solid rgb(229, 229, 229) 1px;
+}
+
+modal .modal-background .window .message {
+    font-size: 1.2em;
+    padding-left: 1.2em;
+    border-bottom: solid rgb(229, 229, 229) 1px;
+}
+
+modal .modal-background .window .buttons {
+    width: 100%;
+    height: 30%;
+    padding: 1.2em 0;
+}
+
+modal .modal-background .window .close {
+    position: absolute;
+    top: 0.2em;
+    right: 1em;
+    font: 1.5em Xiomara, sans-serif;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+modal .modal-background .window .close:hover {
+    color: rgb(37, 40, 48);
+}
+
+modal .modal-background .window .alert,
+modal .modal-background .window .ok,
+modal .modal-background .window .reject {
+    float: right;
+    margin-right: 1.4em;
+    padding: 0.5em 0.7em;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+modal .modal-background .window .ok {
+    background-color: rgba(27, 201, 142, 0.85);
+    border: solid rgb(27, 201, 142) 1px;
+}
+
+modal .modal-background .window .reject{
+    background-color: rgba(230, 71, 89, 0.85);
+    border: solid rgb(230, 71, 89) 1px;
+}
+
+modal .modal-background .window .alert {
+    background-color: rgb(28, 168, 221);
+    border: solid rgb(25, 151, 198) 1px;
+}
+
+modal .modal-background .window .ok:hover {
+    background: rgb(27, 201, 142);
+}
+
+modal .modal-background .window .reject:hover {
+    background: rgb(230, 71, 89);
+}
+
+modal .modal-background .window .alert:hover {
+    background-color: rgb(22, 134, 176);
+}
+
+modal .group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}tables .tables-list {
+    float: left;
+    width: 42%;
+}
+
+tables .table-container {
+    float: right;
+    width: 53%;
+}
+
+tables .tables-list .title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+tables .tables-list .list {
+    margin: 1em auto;
+    font: 1.4em Xiomara, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+tables .tables-list .list div {
+    margin-top: 0.7em;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+tables .tables-list .list div:hover {
+    color: rgba(230, 71, 89, 0.9);
+    text-shadow: 2px -2px 10px rgb(230, 71, 89);
+}
+
+tables .tables-list .list div.active-table-title {
+    color: rgba(230, 71, 89, 0.9);
+    text-shadow: 2px -2px 10px rgb(230, 71, 89);
+}
+
+tables table.tb,
+storage-table table.tb {
+    margin-bottom: 2em;
+    border: solid rgb(67, 72, 87) 1px;
+    border-radius: 4px;
+}
+
+tables table.tb caption.tb-title,
+storage-table table.tb caption.tb-title {
+    padding: 4px 0;
+    font: 1.5em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+tables table.tb tr td,
+storage-table table.tb tr td {
+    border: solid rgb(67, 72, 87) 1px;
+    padding: 0.4em;
+    width: 11%;
+    font-family: Hangyaboly, sans-serif;
+    color: rgba(193, 196, 203, 0.7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+storage-table table.tb tr td.td-name,
+tables table.tb tr td.td-name {
+    width: 45%;
+    text-align: left;
+    padding-left: 10px;
+    border-right: double rgb(67, 72, 87) 5px;
+}
+
+storage-table table.tb td.color.name-color,
+tables table.tb td.color.name-color {
+    background: rgba(204, 173, 198, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.portion-color,
+tables table.tb td.color.portion-color {
+    background: rgba(216, 169, 156, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.carbohyd-color,
+tables table.tb td.color.carbohyd-color {
+    background: rgba(160, 210, 157, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.prot-color,
+tables table.tb td.color.prot-color {
+    background: rgba(255, 226, 36, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.fat-color,
+tables table.tb td.color.fat-color {
+    background: rgba(242, 201, 187, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb td.color.kall-color,
+tables table.tb td.color.kall-color {
+    background: rgba(181, 255, 248, 0.5);
+    font-size: 1.1em;
+    color: black;
+}
+
+storage-table table.tb tr.my-food:hover,
+tables table.tb tr.my-food:hover {
+    background:  rgba(255, 82, 82, 0.5);
+    cursor: pointer;
+}
+table-add .my-table {
+    display: inline-block;
+    position: relative;
+    width: 44%;
+    margin-left: 6em;
+    vertical-align: top;
+}
+
+table-add .add-to-table-form {
+    display: inline-block;
+    margin-bottom: 4em;
+}
+
+table-add .add-to-table-form table {
+    margin-top: 1em;
+}
+
+table-add .add-to-table-form form label {
+    margin-top: 1.2em;
+    margin-left: 1.2em;
+    font: 1.4em Angry-Birds, sans-serif;
+    color: rgb(193, 196, 203);
+}
+
+table-add .add-to-table-form form  input {
+    margin-left: 2.8em;
+    padding-left: 0.2em;
+    vertical-align: middle;
+    line-height: 1.5em;
+    background-color: rgb(67, 72, 87);
+    border: none;
+    border-radius: 5px;
+}
+
+table-add .add-to-table-form form  input:focus {
+    outline: none;
+    background-color: rgb(200, 203, 213);
+}
+
+table-add .add-to-table-form form td {
+    padding: 0.6em 0;
+}
+
+table-add .add-to-table-form .add-form-title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+}
+
+table-add .add-to-table-form form .add-to-table-button {
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    margin: 0.5em 0 0 6em;
+    padding: 0.05em;
+    vertical-align: top;
+    text-align: center;
+    border: solid 3px;
+    border-radius:30px;
+    box-shadow: 0 0 10px 0 rgba(159, 134, 255, 0.6);
+    font: 4em Angry-Birds, sans-serif;
+    color: rgba(159, 134, 255, 0.6);
+    line-height: 0.45em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+table-add .add-to-table-form form .add-to-table-button:hover {
+    color: rgba(228, 216, 54, 1);
+}
+
+save-menu .title {
+    font: 2em Angry-Birds, sans-serif;
+    color: rgb(228, 216, 54);
+    margin-bottom: 1.5em;
+}
+
+save-menu .button {
+    display: inline-block;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding: 0.4em 0.6em;
+    border-radius: 6px;
+    font: 1.2em Xiomara, sans-serif;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+save-menu .save-button,
+save-menu .print-to-localStorage {
+    color: rgb(27, 201, 142);
+    border: solid rgb(27, 201, 142) 1px;
+}
+
+save-menu .save-button:hover,
+save-menu .print-to-localStorage:hover {
+    background: rgb(27, 201, 142);
+    color: white;
+}
+
+save-menu .remove-print-localStorage,
+save-menu .remove-data {
+    color: rgb(230, 71, 89);
+    border: solid rgb(230, 71, 89) 1px;
+}
+
+save-menu .remove-print-localStorage:hover,
+save-menu .remove-data:hover {
+    background: rgb(230, 71, 89);
+    color: white;
+}
+
+save-menu .to-print {
+    color: rgb(25, 151, 198);
+    border: solid rgb(25, 151, 198) 1px;
+}
+
+save-menu .to-print:hover {
+    background-color: rgb(28, 168, 221);
+    color: white;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiLCJzb3VyY2VSb290IjoiIn0=*/

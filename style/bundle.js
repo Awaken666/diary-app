@@ -89,9 +89,9 @@ var bundle =
 
 	        $timeout(function () {
 	            modal.open({ title: 'Дневник питания', message: 'Пожалуйста, выберите версию' }, 'confirm').then(function () {
-	                return document.location.href = '../second-version';
+	                return document.location.href = './second-version';
 	            }, function () {
-	                return document.location.href = '../first-version';
+	                return document.location.href = './first-version';
 	            });
 	        }, 0);
 	    },

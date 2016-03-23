@@ -3,6 +3,11 @@
     src: url(hangyaboly.ttf)   format("truetype");
 }
 
+@font-face {
+    font-family: "Angry-Birds";
+    src: url(angry-birds.ttf)   format("truetype");
+}
+
 modal .modal-background {
     position: fixed;
     top: 0;
@@ -88,7 +93,7 @@ modal .modal-background .window .reject {
     padding: 0.5em 0.7em;
     border-radius: 6px;
     color: white;
-    font-size: 1.1em;
+    font: 1.1em Angry-Birds, sans-serif;
     text-align: center;
     cursor: pointer;
 }

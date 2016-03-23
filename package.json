@@ -22,7 +22,7 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node public/server.js"
   },
   "repository": {
     "type": "git",

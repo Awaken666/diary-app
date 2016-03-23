@@ -3,25 +3,21 @@
 <html ng-app="printApp">
 
 <head>
-    <title>Для печати</title>
+    <title>Р”Р»СЏ РїРµС‡Р°С‚Рё</title>
     <style type="text/css">
         html {
             width: 750px;
         }
-
         body {
             width: 750px;
         }
-
         h1 {
             font-size: 2.4em;
             text-align: center;
         }
-
         h4 {
             font-size: 1.5em;
         }
-
         span {
             margin: 10px 2px 5px;
             display: inline-block;
@@ -29,28 +25,23 @@
             font-size: 0.97em;
             width: 12%
         }
-
         .title {
             border-bottom: solid black 2px;
         }
-
         .title span {
             font-family: "Times New Roman", Times, serif;
             font-weight: 600;
             font-size: 1em;
         }
-
         div span:first-of-type {
             width: 30%;
         }
-
         hr {
             border: 0;
             border-bottom: 5px solid black;
             margin: 70px auto;
             width: 100%;
         }
-
     </style>
     <script src="https://code.angularjs.org/1.5.0/angular.js"></script>
 
@@ -58,17 +49,17 @@
 
 <body ng-controller="print as print">
 
-<h1>Дневник питания</h1>
+<h1>Р”РЅРµРІРЅРёРє РїРёС‚Р°РЅРёСЏ</h1>
 
 <div ng-repeat="day in print.daysData" ng-if="print.data">
-    <h3>Дата: {{ day.saveTime | date}}</h3>
+    <h3>Р”Р°С‚Р°: {{ day.saveTime | date}}</h3>
 
     <div ng-repeat="time in day.dayTimes">
         <h4>{{ time.dayTime }}</h4>
 
         <div>
             <div class="title">
-                <span>Наименование продукта</span><span>Порция(гр)</span><span>Углеводы</span><span>Белки</span><span>Жиры</span><span>Калории</span>
+                <span>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РїСЂРѕРґСѓРєС‚Р°</span><span>РџРѕСЂС†РёСЏ(РіСЂ)</span><span>РЈРіР»РµРІРѕРґС‹</span><span>Р‘РµР»РєРё</span><span>Р–РёСЂС‹</span><span>РљР°Р»РѕСЂРёРё</span>
             </div>
             <div ng-repeat="food in time.foods">
                 <span>{{ food.name }}</span><span>{{ food.portion }}</span><span>{{ food.carbohyd }}</span><span>{{ food.prot }}</span><span>{{ food.fat }}</span><span>{{ food.fat }}</span>
@@ -76,11 +67,11 @@
 
         </div>
     </div>
-    <h4>Итог:</h4>
+    <h4>РС‚РѕРі:</h4>
 
     <div>
         <div class="title">
-            <span>---------------------</span><span>---</span><span>Углеводы</span><span>Белки</span><span>Жиры</span><span>Калории</span>
+            <span>---------------------</span><span>---</span><span>РЈРіР»РµРІРѕРґС‹</span><span>Р‘РµР»РєРё</span><span>Р–РёСЂС‹</span><span>РљР°Р»РѕСЂРёРё</span>
         </div>
         <div>
             <span></span><span>---</span><span>{{ day.result.carbohyd.value }}</span><span>{{ day.result.prot.value }}</span><span>{{ day.result.fat.value }}</span><span>{{ day.result.fat.value }}</span>
@@ -96,7 +87,6 @@
         this.data = true;
         $window.localStorage.daysData ? this.daysData = JSON.parse($window.localStorage.daysData) : this.data = false;
     })
-
 </script>
 
 </body>

@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        bundle: './js/diaryApp',
+        bundle: './js/diaryApp.js',
         styles: './css'
     },
     output: {

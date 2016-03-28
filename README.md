@@ -2,6 +2,8 @@
 
 AngularJS application to control the daily food intake, calories and nutritious elements calculation depending on a chosen diet. 
 
+To version 2.0 => https://github.com/Awaken666/diary-app/tree/second-version
+
 ## Version 1.0 features 
 
 • Easy accessible food database; 

@@ -2,7 +2,7 @@
 
 AngularJS application to control the daily food intake, calories and nutritious elements calculation depending on a chosen diet. 
 
-To version 2.0 => https://github.com/Awaken666/diary-app/tree/second-version
+To version 2.0 => https://github.com/v-urbanovich/diary-app/tree/second-version
 
 ## Version 1.0 features 
 
@@ -26,7 +26,7 @@ To version 2.0 => https://github.com/Awaken666/diary-app/tree/second-version
 
 ## Preview 
 
-The app is available on http://awaken666.github.io/diary-app/ 
+The app is available on http://v-urbanovich.github.io/diary-app/ 
 
 ## The required commands are: 
 

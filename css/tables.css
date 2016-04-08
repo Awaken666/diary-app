@@ -1,3 +1,19 @@
+@media (max-width: 730px) {
+    tables div.tables-list {
+        position: relative;
+        float: none;
+        width: 90%;
+        margin: auto;
+    }
+
+    tables div.table-container {
+        position: relative;
+        float: none;
+        width: 90%;
+        margin: 2.5em auto;
+    }
+}
+
 tables .tables-list {
     float: left;
     width: 42%;

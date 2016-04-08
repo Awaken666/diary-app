@@ -1,3 +1,11 @@
+@media (max-width: 730px) {
+    menu #menu .phase-menu .phase-choose div {
+        margin-left: 1.6em;
+        font-size: 2.6em;
+    }
+}
+
+
 menu .diet-menu {
     margin-bottom: 2em;
 }
@@ -76,7 +84,7 @@ menu .phase-menu .phase-choose div.third-phase.active3 {
 
 menu .clear-limits {
     display: inline-block;
-    margin-top: 3em;
+    margin: 2.5em auto;
     padding: 0.5em;
     border: solid rgb(230, 71, 89) 1px;
     border-radius: 6px;

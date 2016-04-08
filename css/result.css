@@ -1,3 +1,10 @@
+@media (max-width: 730px) {
+    result .result div.result-table {
+        width: 35%;
+        margin: 3em 0 2em 10%;
+    }
+}
+
 result .result .result-title {
     font: 2em Angry-Birds, sans-serif;
     color: rgb(228, 216, 54);

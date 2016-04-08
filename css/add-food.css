@@ -1,3 +1,9 @@
+@media (max-width: 730px) {
+    table-add div.my-table {
+        margin: 0.5em 1em;
+    }
+}
+
 table-add .my-table {
     display: inline-block;
     position: relative;

@@ -1,3 +1,28 @@
+@media (max-width: 730px) {
+    home .home-page .daytime-select-tooltip,
+    home .home-page .menu-select-tooltip {
+        width: 90%;
+        margin: auto;
+    }
+
+    home .home-page h2 {
+        font-size: 1.7em;
+    }
+
+    home .home-page .menu-select-tooltip {
+        margin: 2em auto;
+    }
+
+    home .home-page .daytime-select-tooltip:after {
+        bottom: 101%;
+        right: 50%;
+    }
+
+    home .home-page .menu-select-tooltip:after {
+        display: none;
+    }
+}
+
 .home-page .left-line, .right-line {
     width: 33%;
     padding: 1.1em 0;

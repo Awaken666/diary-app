@@ -1,3 +1,10 @@
+@media (max-width: 730px) {
+    modal .modal-background div.window {
+        width: 80%;
+        left: 30%;
+    }
+}
+
 modal .modal-background {
     position: fixed;
     top: 0;

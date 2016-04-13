@@ -75,7 +75,7 @@ body {
     width: 100%;
     height: 100%;
 }
-@media (max-width: 730px) {
+@media screen and  (max-width: 730px) {
     html {
         min-width: 560px;
     }
@@ -92,7 +92,7 @@ body {
     margin: 3em 6em 0 13em;
 }
 
-@media (max-width: 730px) {
+@media screen and (max-width: 730px) {
     left-side-menu .left-side-menu {
         position: relative ;
         width: 100%;
@@ -241,7 +241,7 @@ left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}
     display: inline-block;
     width: 100%;
     height: 100%;
-}@media (max-width: 730px) {
+}@media screen and (max-width: 730px) {
     daytime-choose .daytime-choose {
         width: 96%;
         height: 3.8em;
@@ -308,7 +308,7 @@ left-side-menu .tooltip.ng-enter.ng-enter-active {opacity: 1;}
     bottom: 0;
     left: 50%;
     margin-left: -6px;
-}@media (max-width: 730px) {
+}@media screen and (max-width: 730px) {
     home .home-page .daytime-select-tooltip,
     home .home-page .menu-select-tooltip {
         width: 90%;
@@ -577,7 +577,7 @@ food .food.empty .remove-food {
 }
 
 
-@media (max-width: 730px) {
+@media screen and (max-width: 730px) {
     menu #menu .phase-menu .phase-choose div {
         margin-left: 1.6em;
         font-size: 2.6em;
@@ -674,7 +674,7 @@ menu .clear-limits {
 menu .clear-limits:hover {
     background: rgba(230, 71, 89, 0.7);
     color: white;
-}@media (max-width: 730px) {
+}@media screen and (max-width: 730px) {
     result .result div.result-table {
         width: 35%;
         margin: 3em 0 2em 10%;
@@ -731,7 +731,7 @@ result .result .result-table .value.limits .graph {
     top: 0;
     height: 100%;
     z-index: -1;
-}@media (max-width: 730px) {
+}@media screen and (max-width: 730px) {
     modal .modal-background div.window {
         width: 80%;
         left: 30%;
@@ -857,7 +857,7 @@ modal .group:after {
     height: 0;
     clear: both;
     visibility: hidden;
-}@media (max-width: 730px) {
+}@media screen and (max-width: 730px) {
     tables div.tables-list {
         position: relative;
         float: none;
@@ -991,7 +991,7 @@ tables table.tb tr.my-food:hover {
     background:  rgba(255, 82, 82, 0.5);
     cursor: pointer;
 }
-@media (max-width: 730px) {
+@media screen and (max-width: 730px) {
     table-add div.my-table {
         margin: 0.5em 1em;
     }
